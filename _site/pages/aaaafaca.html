@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Victor Alarcon - Artista</title>
+    <link rel="stylesheet" href="{{ '/assets/style.css' | relative_url }}">
+    <style>
+        /* Estilos locais específicos para esta página */
+        .container {
+            display: flex;
+            align-items: center; /* Centraliza verticalmente os itens */
+            justify-content: space-between; /* Espaça os itens uniformemente */
+            padding: 20px;
+            margin: 0 auto;
+            max-width: 1200px; /* Define uma largura máxima para o contêiner */
+        }
+        .text {
+            max-width: 50%; /* Define a largura máxima do texto */
+        }
+        .text h2 {
+            margin-bottom: 10px;
+            font-size: 2em; /* Tamanho do título */
+        }
+        .image img {
+            max-width: 90%; /* A imagem ocupa todo o espaço da coluna */
+            height: auto; /* Mantém a proporção da imagem */
+        }
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column; /* Muda para uma coluna em telas menores */
+                text-align: center; /* Centraliza o texto */
+            }
+            .text, .image {
+                max-width: 100%; /* Aumenta a largura para 100% em telas menores */
+                margin-bottom: 20px; /* Adiciona espaço entre os elementos */
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <nav>
+        <a href="/">Bio</a>
+        <a href="/pages/faca">Faça</a>
+        <a href="/">Colecione</a>
+        <a href="/pages/sobre">Participe</a>
+    </nav>
+    <h1>Victor Alarcon</h1>
+    <p>É tudo ficção</p>
+</header>
+
+<main>
+    <div class="container">
+        <div class="image">
+            <img src="Re4trato-grande.jpg" alt="Retrato de Victor Alarcon">
+        </div>
+        <div class="text">
+            <h2>Bem Vindo</h2>
+            <p>Sou Victor Alarcon e acredito que habilidade e autenticidade são essenciais para a prática artística. Minha jornada começou em 2019 com xilogravuras, expandindo para pinturas e esculturas nos anos seguintes.</p>
+            <p>Desde 2022, compartilho meu conhecimento artístico na internet.</p>
+        </div>
+    </div>
+
+    <!-- Conteúdo adicional aqui -->
+
+</main>
+
+<footer>
+    <a href="https://chat.whatsapp.com/K0RnliWuTf899D30sc0D2m" target="_blank" class="whatsapp-button">WHATSAPP</a>
+    <a href="https://instagram.com/gravoepinto" target="_blank" class="insta-button">INSTAGRAM</a>
+    <a href="https://www.youtube.com/@gravoepinto" target="_blank" class="youtube-button">YOUTUBE</a>
+    <a href="https://www.tiktok.com/@gravoepinto" target="_blank" class="tiktok-button">SIGA NO TIKTOK</a>
+    <p>Feito artesanalmente por Victor Alarcon.</p>
+    <small>© 2024 Victor Alarcon</small>
+    <address>????@email.com</address>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/gh/MarketingPipeline/Markdown-Tag/markdown-tag.js"></script>
+
+</body>
+</html>
