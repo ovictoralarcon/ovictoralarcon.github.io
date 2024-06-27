@@ -810,3 +810,118 @@ pre[class*="language-"] {
 .token.italic {
 	font-style: italic;
 }
+<<<<<<< HEAD
+=======
+
+        .insta-button {
+    display: inline-block;
+    background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+    color: white; /* Define a cor do texto como branco */
+    padding: 10px 20px;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 4px 9px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.insta-button:hover {
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    color: white; /* Garante que a cor do texto permaneça branca ao passar o mouse */
+}
+
+
+
+.insta-button:visited {
+    color: white; /* Cor do texto do botão */
+}
+/* Estilo do botão com cores do YouTube */
+        .youtube-button {
+            display: inline-block;
+            background: #ff0000; /* Vermelho */
+            color: #fff; /* Texto branco */
+            padding: 10px 20px;
+            font-size: 16px;
+            text-align: center;
+            text-decoration: none;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            box-shadow: 0 4px 9px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .youtube-button:hover {
+            background: #ff3333; /* Vermelho mais claro */
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+            transform: translateY(-2px);
+        }
+.youtube-button:visited {
+    color: white; /* Cor do texto do botão */
+}
+
+/* Estilo do botão com cores do TikTok */
+        .tiktok-button {
+            display: inline-block;
+            background-color: #000; /* Preto */
+            color: #fff; /* Texto branco */
+            padding: 10px 20px;
+            font-size: 16px;
+            text-align: center;
+            text-decoration: none;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            box-shadow: 0 4px 9px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .tiktok-button:hover {
+            background-color: #00a1e9; /* Azul característico do TikTok */
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+            transform: translateY(-2px);
+        }
+
+        .tiktok-button:focus,
+        .tiktok-button:active {
+            outline: none; /* Remove a borda padrão de foco */
+        }
+.tiktok-button:visited {
+    color: white; /* Cor do texto do botão */
+}
+
+
+/* Estilo do botão para WhatsApp */
+        .whatsapp-button {
+            display: inline-block;
+            background-color: #25D366; /* Verde característico do WhatsApp */
+            color: #fff; /* Texto branco */
+            padding: 10px 20px;
+            font-size: 16px;
+            text-align: center;
+            text-decoration: none;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            box-shadow: 0 4px 9px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .whatsapp-button:hover {
+            background-color: #128C7E; /* Tom mais escuro do verde do WhatsApp */
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+            transform: translateY(-2px);
+        }
+
+        .whatsapp-button:focus,
+        .whatsapp-button:active {
+            outline: none; /* Remove a borda padrão de foco */
+        }
+
+.whatsapp-button:visited {
+    color: white; /* Cor do texto do botão */
+}
+>>>>>>> 352bfbd (Criei as páginas)
