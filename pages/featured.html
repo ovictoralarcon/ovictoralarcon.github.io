@@ -1,0 +1,27 @@
+---
+layout: default
+title: Destaque
+---
+
+<div class="featured-post">
+  {% assign latest_post = site.posts | first %}
+  <h1>{{ latest_post.title }}</h1>
+  <p>{{ latest_post.content | truncatewords: 50 }}</p>
+</div>
+
+<div class="home-latest-post">
+    <h2>Última Publicação do Blog</h2>
+    {% assign latest_post = site.posts | first %}
+    <h3>{{ latest_post.title }}</h3>
+    <p>{{ latest_post.content | truncatewords: 50 }}</p>
+    <a href="{{ latest_post.url }}">Leia mais...</a>
+  </div>
+  
+  <div class="home-links">
+    <h2>Explore Minhas Páginas:</h2>
+    <ul>
+      <li><a href="/cursos/">Cursos</a></li>
+      <li><a href="/obras/">Obras</a></li>
+      <!-- Adicione mais links conforme necessário -->
+    </ul>
+  </div>
