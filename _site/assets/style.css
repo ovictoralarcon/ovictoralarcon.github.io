@@ -223,31 +223,13 @@ main {
 }
 
 body > footer {
-    margin-top: 4rem;
-    padding: 2rem 1rem 1.5rem 1rem;
-    color: var(--text-light);
-    font-size: 0.9rem;
-    text-align: center;
-    border-top: 1px solid var(--border);
+  margin-top: 4rem;
+  padding: 2rem 1rem 1.5rem 1rem;
+  color: var(--text-light);
+  font-size: 0.9rem;
+  text-align: center;
+  border-top: 1px solid var(--border);
 }
-
-.footer-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.footer-content a {
-    text-decoration: none;
-    margin: 0 10px;
-    color: var(--text-light); /* Ajuste a cor conforme necessário */
-}
-
-.footer-content p, .footer-content small, .footer-content address {
-    margin: 5px 0;
-}
-
 
 
 /* Format headers */
@@ -258,6 +240,7 @@ h1 {
 h2 {
   font-size: 2.6rem;
   margin-top: 3rem;
+  text-align: center;
 }
 
 h3 {
@@ -937,41 +920,37 @@ pre[class*="language-"] {
 .whatsapp-button:visited {
     color: white; /* Cor do texto do botão */
 }
-.video-container {
-    text-align: center; /* Centraliza o conteúdo horizontalmente */
-    margin: 0 auto; /* Centraliza o conteúdo na página */
-    max-width: 560px; /* Largura máxima do vídeo, ajuste conforme necessário */
-}
 
-/* Estilos para o botão de vendas */
 
-.sales-button-container {
-    text-align: center; /* Centraliza o botão horizontalmente na página */
-    margin: 40px 0; /* Espaçamento generoso para destaque */
-}
 
-.sales-button {
-    display: inline-block;
-    background-color: #28a745; /* Verde vibrante */
-    color: #ffffff; /* Texto branco */
-    padding: 15px 30px; /* Aumenta o tamanho do botão */
-    font-size: 1.5rem; /* Aumenta o tamanho da fonte */
-    border-radius: 50px; /* Botão com bordas arredondadas */
-    text-decoration: none; /* Remove sublinha do link */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Sombra mais pronunciada */
-    transition: all 0.3s ease; /* Transições suaves */
-    font-family: 'Arial', sans-serif; /* Fonte legível */
-    font-weight: bold; /* Texto em negrito */
-}
 
-.sales-button:hover {
-    background-color: #218838; /* Cor mais escura no hover */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra mais pronunciada no hover */
-    transform: translateY(-3px); /* Leve elevação ao passar o mouse */
-}
+/* Estilo do botão para botao de venda */
+        .botao-vendas {
+            display: inline-block;
+            background-color: #25D366; /* Verde característico do WhatsApp */
+            color: #fff; /* Texto branco */
+            padding: 25px 175px;
+            font-size: 16px;
+            text-align: center;
+            text-decoration: none;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            box-shadow: 0 4px 9px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
 
-.sales-button:active {
-    background-color: #1e7e34; /* Cor ainda mais escura ao clicar */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra reduzida */
-    transform: translateY(0); /* Volta à posição original ao clicar */
+        .botao-vendas:hover {
+            background-color: #128C7E; /* Tom mais escuro do verde do WhatsApp */
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+            transform: translateY(-2px);
+        }
+
+        .botao-vendasn:focus,
+        .botao-vendas:active {
+            outline: none; /* Remove a borda padrão de foco */
+        }
+
+.botao-vendas:visited {
+    color: white; /* Cor do texto do botão */
 }

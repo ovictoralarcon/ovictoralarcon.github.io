@@ -1,62 +1,21 @@
-<!DOCTYPE html>
 <head>
-    <link rel="stylesheet" href="{{ '/assets/style.css' | relative_url }}">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pintura de observação em têmpera ovo | oficina</title>
-
-
-    <style>
-        .container {
-            display: flex;
-            align-items: center; /* Centraliza verticalmente os itens */
-            justify-content: space-between; /* Espaça os itens uniformemente */
-            padding: 20px;
-            margin: 0 auto;
-            max-width: 1200px; /* Define uma largura máxima para o contêiner */
-        }
-        .text {
-            max-width: 50%; /* Define a largura máxima do texto */
-        }
-        .text h1 {
-            margin-bottom: 10px;
-            font-size: 2em; /* Tamanho do título */
-        }
-        
-        .image img {
-            max-width: 90%; /* A imagem ocupa todo o espaço da coluna */
-            height: auto; /* Mantém a proporção da imagem */
-        }
-        @media (max-width: 768px) {
-            .container {
-                flex-direction: column; /* Muda para uma coluna em telas menores */
-                text-align: center; /* Centraliza o texto */
-            }
-            .text, .image {
-                max-width: 100%; /* Aumenta a largura para 100% em telas menores */
-                margin-bottom: 20px; /* Adiciona espaço entre os elementos */
-            }
-        }
-    </style>
-
-
     <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Pintura de observação em têmpera ovo | oficina</title>
-  
+<title>Técnica antiga para artistas atuais.</title>
 <meta name="description" content="A showcase of Simply Docs by MarketingPipeline built using Simple.CSS">
 
-<link rel="stylesheet" href="./assets/style.css">
+<link rel="stylesheet" href="/assets/style.css">
 
-<link rel="icon" href="./assets/images/favicon.png">
-<link rel="apple-touch-icon" href="./assets/images/favicon.png">
+<link rel="icon" href="/assets/images/favicon.png">
+<link rel="apple-touch-icon" href="/assets/images/favicon.png">
+
 
  <!-- Facebook integration -->
 <meta property="og:title" content="Simply Docs Demo">
-<meta property="og:image" content="./assets/images/OG_image.png">
-<meta property="og:url" content="https://marketingpipeline.github.io/Simply-Docs/">
+<meta property="og:image" content="/assets/images/OG_image.png">
+<meta property="og:url" content="https://marketingpipeline.github.io/">
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="Simple.css">
 <meta property="og:description" content="A Simply Docs / Blog Template built using Simple.css.">
@@ -64,104 +23,200 @@
 <!-- Twitter integration -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Simply Docs | Demo">
-<meta name="twitter:image" content="./assets/images/OG_image.png">
-<meta name="twitter:url" content="https://marketingpipeline.github.io/Simply-Docs/">
+<meta name="twitter:image" content="/assets/images/OG_image.png">
+<meta name="twitter:url" content="https://marketingpipeline.github.io/">
 <meta name="twitter:description" content="A Simply Docs / Blog Template built using Simple.css">
-<script src="https://cdn.jsdelivr.net/npm/prismjs@1.28.0/prism.min.js"></script>
 
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.28.0/prism.min.js"></script>
+<style>
+        .container {
+            width: 100%;
+            overflow: auto;
+        }
+        .container img {
+            float: left;
+            margin-right: 20px; /* Espaço entre a imagem e o texto */
+        }
+        .container p {
+            margin: 0; /* Remove a margem superior para alinhar o texto com a imagem */
+        }
+    </style>
   </head>
 <header>
-   <nav>
+<nav>
+    <a href="/pages/faca">Aprenda</a>
   
-  <a href="index">Aprenda</a>
+  <a href="/pages/colecione">Colecione</a>
   
-  <a href="index">Colecione</a>
+  <a href="/pages/assine">Assine</a>
+
+  <a href="Bio">Bio</a>
   
-  <a href="index">Assine</a>
-
-  <a href="index">Bio</a>
-
-<!-- <a href=><svg class="icon" viewBox="0 0 32 32"><path d="M16 0.395c-8.836 0-16 7.163-16 16 0 7.069 4.585 13.067 10.942 15.182 0.8 0.148 1.094-0.347 1.094-0.77 0-0.381-0.015-1.642-0.022-2.979-4.452 0.968-5.391-1.888-5.391-1.888-0.728-1.849-1.776-2.341-1.776-2.341-1.452-0.993 0.11-0.973 0.11-0.973 1.606 0.113 2.452 1.649 2.452 1.649 1.427 2.446 3.743 1.739 4.656 1.33 0.143-1.034 0.558-1.74 1.016-2.14-3.554-0.404-7.29-1.777-7.29-7.907 0-1.747 0.625-3.174 1.649-4.295-0.166-0.403-0.714-2.030 0.155-4.234 0 0 1.344-0.43 4.401 1.64 1.276-0.355 2.645-0.532 4.005-0.539 1.359 0.006 2.729 0.184 4.008 0.539 3.054-2.070 4.395-1.64 4.395-1.64 0.871 2.204 0.323 3.831 0.157 4.234 1.026 1.12 1.647 2.548 1.647 4.295 0 6.145-3.743 7.498-7.306 7.895 0.574 0.497 1.085 1.47 1.085 2.963 0 2.141-0.019 3.864-0.019 4.391 0 0.426 0.288 0.925 1.099 0.768 6.354-2.118 10.933-8.113 10.933-15.18 0-8.837-7.164-16-16-16z"></path></svg>Github</a>-->
-
 </nav>
 
-      <h2>Pintura de observação em têmpera ovo</h2>
-      <p>PROMESSA</p>
-
+        <h1>Acompanhamento</h1>
+               <h2>Técnica antiga para artistas atuais</h2>
+      <p>01/06/2024 <br>por <a>Victor Alarcon</a></p>
     </header>
-<main>
 
 
-<div class="video-container">
-    <!-- Código de incorporação do YouTube -->
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/ZBVsCHur-hk?si=KYhKyKyhlRJg4U9e" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+ <main>
+<article>
+
+     <h2>Crie sua pintura autoral a partir da técnicas da têmpera ovo, usada por Giotto e Botticelli. </h2> <!-- O que é -->
+
+
+<div class="button-container">
+<center>
+        <a href="#elements" class="botao-vendas">Compre Agora!</a>
+<center/>
+    </div>
+
+
+<h3>Por que pintar com gema de ovo?</h3>
+<p>
+A primeira vez que vi a têmpera sendo preparada foi em uma aula de pintura na faculdade. A aula era sobre o Volpi, mas eu sabia que a têmpera era uma técnica muito mais antiga, já era usada pelos antigos iconógrafos da Europa medieval. Fiquei curioso por ser uma material barato que me permitiria fazer minha própria tinta e decidi testar e me aprofundar.
+<p/>
+<p>
+<img src="assets/images/640px-Sandro_Botticelli_-_La_nascita_di_Venere_-_Google_Art_Project_-_edited.jpeg"
+width="800"/>
+	<p/>
+<p>
+Estudei durante mais de dois anos e descobri outras vantagens de se dominar a têmpera ovo. Algumas vantagens são:
+
+<ol>
+<li><b>Pinturas mais luminosas que eu já vi.</b> Quando colocadas ao lado das minhas pinturas com acrílica ou óleo as feitas com têmpera ovo se destacam pelas cores mais vivas.</li> 
+ 
+<li><b>Material completamente atóxico.</b> Muitos materiais que uso são literalmente comestíveis e a maioria é completamente atóxico. Sempre dá pra conseguir usar pigmento a base de chumbo se vc faz questão de se arriscar, mas pra quem gosta de estar seguro a têmpera é uma ótima opção.</li> 	
+
+<li><b>Entender como as tintas funcionam.</b> Depois que eu passei a produzir minha própria tinta com gema de ovo passei a entender melhor como funciona a relação entre pigmento, veículo e carga, elementos que compões qualquer tinta. Estudar têmpera ovo acaba sendo uma forma de estudar pintura de uma forma muito ampla .</li> 
+<li><b>Diálogo com a história da arte</b> Usar uma técnica tão antiga quanto a têmpera permite também que de alguma forma eu dialogue com a história da pintura, com os artisas que não podiam comprar tinta em tubos e que precisavam transformar os materiais em suas próprias tintas.</li>
+<li><b>Material com o melhor custo benefício.</b> Nenhum material de arte é baratinho, mas a maioria dos materiais que eu uso não são comprados em lojas de arte, então acabo pagando um preço mais justo por um material de alta qualidade.</li>
+ 
+</ol>
+
+<p/>
+
+<h3>Esse acompanhamento é pra mim?</h3>
+<p>
+<p>
+     A têmpera ovo é uma técnica para pessoa dispostas a se relacionar com a delicadeza e o tempo dos materiais, tanto os tempos muito longos quanto os muito curtos.
+     Para quem quer conhecer em profundidade o processo da pintura, dos pigmentos à conservação em logo prazo. A pintura mais antiga que já vi é do ano 1275, está no MASP e foi feita com têmpera ovo.
+<p/>
+<b>Esse acompanhamento é pensado especialmemte para três tipos de pessoas</b>. 
+<p/>
+<ol>
+<li><b>Entusiastas</b> Se você quer ter uma atividade artística prazerosa, para descansar a cabeça e produzir obras de arte que sejam belas e originai esse acompanhamento é pra você.</li>
+ <li><b>Artista profissional ou aspirante</b> Se você quer aprimorar suas habilidades de pintura, criar ou amadurecer um trabalho autoral com ou sem intenção de entrar no mercado de arte, esse acompanhamento é pra você.
+
+<li> <b>Apreciador de boa arte</b> Fazer arte é a melhor maneira de entender arte. Se você deseja aprofundar seu conhecimento em pintura para aproveitar melhor as visitas a museus durante viagens ou começar a colecionar obras, este acompanhamento é para você.</li>
+</ol>
+<p>
+<p>
+<img src="assets/images/Pintura_tempera_masp.jpg" 
+width="200"/>
+<img src="assets/images/tempera_masp.jpg" 
+width="400"/>
+	<p/>
+
+<h3>Como funciona?</h3>
+
+        <p>O programa inclui:</p>
+        <ul>
+            <li><strong>12 semanas de acompanhamento</strong></li>
+            <li><strong>Conversa de recepção individual comigo</strong> - Alinhamento de expectativas e definição de um objetivo personalizado.</li>
+            <li><strong>Conteúdo gravado em vídeo (acesso por 01 ano):</strong>
+                <ul class="sub-list">
+                    <li><strong>Teoria de pintura com têmpera</strong> - Toda a parte técnica, desde a preparação da tinta até a composição de imagens, passando pelas formas de usar a tinta.</li>
+                    <li><strong>História da arte</strong> - Ampliar seu repertório e te dar referências para criar obras de arte autorais.</li>
+                </ul>
+            </li>
+            <li><strong>Encontros semanais</strong> - Discutir trabalhos, ter feedback e pintarmos juntos.</li>
+            <li><strong>Devolutiva assíncrona</strong> - Formulário para enviar dúvidas que serão respondidas por WhatsApp, para tirar dúvidas o mais rápido possível.</li>
+        </ul>
+
+        <div class="bonus">
+            <h2>🎁 Bônus:</h2>
+            <ul>
+                <li><strong>Comunicação para artistas</strong> - Como se posicionar como artista para fazer parte do universo da arte.</li>
+                <li><strong>Organização para artistas 📅</strong> - Como organizar o tempo e o espaço para passar mais tempo pintando do que arrumando as coisas.</li>
+                
+            </ul>
+
+        <a href="https://bit.ly/falevictor" class="cta">Quer conversar sobre valores, formas de pagamento? Toque aqui e me mande uma mensagem no WhatsApp que eu te esclareço todas as dúvidas!</a>
+    </div>
+
+ <section id="quem-sera-seu-professor">
+      <h2>Quem será seu professor? </h2> <!-- Quem criou isso? -->
+    
+  <div class="container">
+        <img src="/assets/images/headshot.jpg" width="250" alt="Victor Alarcon">
+        <p>Victor Alarcon acredita que habilidade e autenticidade são essenciais para a prática artística. Também acredita que essas duas coisas não são dons, mas são frutos de estudo e treino.</p>
+    
+<p> 
+Nos últimos anos tem se apropriado da antiga técnicas da têmpera ovo para usá-la como potente meio de produção artística contemporânea.
+<p/>
+
+<p> 
+
+Desde 2022, ele compartilha seu conhecimento artístico na internet.
+Em 2018 iniciou sua segunda graduação, dessa vez no Instituto de Arte da UNESP, em artes visuais. Começo a produzir em obras 2019, com xilogravuras, expandindo para pinturas e esculturas nos anos seguintes. 
+
+<p/>
 </div>
 
-<div class="sales-button-container">
-        <a href="https://sua-pagina-de-vendas.com" class="sales-button">Compre Agora</a>
-    </div>
 
-	
-<h2>Preço</h2/>
-<h2>Garantia</h2/>
+<p> <p/>
+&nbsp
 
-Se tiver, mas não quero que tenha não.
+<p> <p/>
+&nbsp
+<p> <p/>
+&nbsp
+<p> <p/>
+&nbsp
 
-<h2>Depoimentos</h2/>
+      <div id="elements"></div>
+      <script src="https://cdn.eduzzcdn.com/sun/bridge/bridge.js"></script>
+      <script>
+        (function () {
+          const load = function () {
+              window.Eduzz.Checkout.init({
+                contentId: 2170875,
+                target: "elements",
+                errorCover: false
+              });
+          }
+          if (document.readyState === 'complete') {
+              load();
+              return;
+          }
+          window.addEventListener('load', load);
+        })();
+      </script>
 
 
-<h2>Argumentos</h2/>
-
-<h2>Autor</h2/>
-
-
-<p> Um texto pra separar o vídeo do cabeçalho e pra ser uma explicaçãozinha do que se trata essa coisa...
-</p>
-
-<!--
-
-<ul>
-  <li>An amazing looking <code>blog / documentation</code> template.</li>
-  <li>Ready to host on Github Pages!</li>
-  <li>Automagic flipping to dark mode.</li>
-  <li>Fully responsive.</li>
-  <li>Make changes using only standard HTML elements!</li>
-  <li>Easy to edit!</li>
-  <li style="color:blue;">Apply your own CSS style with ease!</li>
-  <li>Super lightweight & <strong>fast</strong>.</li>
-	<a href="/Simply-Docs/pages/documentation#syntax_highlighting"><li>Syntax highlighting (Click to find out more)</li> 
-	</a> 
-	<a href="/Simply-Docs/pages/documentation#markdown_example"><li>Markdown Support! (Click to find out more)</li> 
-	</a> 
-</ul>
-</main>
-<a href=""><button>Baixe meu catálogo!</button></a>
+<!-- 
+      <blockquote>
+ 
+        <h4> This is a GREAT pull quote.</h4>
+        <p> Update</p>
+         
+        <a href="#">- Author</a>
+      </blockquote>
+    </article>
+    </main>
 
 -->
-
-detalhar o conteúdo que será dado no curso.</h2/>
-
-<footer>
-	odapé
-É importante sua página de vendas ter um rodapé com
-informações como:
-CNPJ;
-Nome;
-Endereço;
-E-mail;
-Telefone para contato.
-    <div class="footer-content">
-      <p>        
-	<a href="https://chat.whatsapp.com/K0RnliWuTf899D30sc0D2m" target="_blank" class="whatsapp-button">WHATSAPP</a>
-        <a href="https://instagram.com/gravoepinto" target="_blank" class="insta-button">INSTAGRAM</a>
-        <a href="https://www.youtube.com/@gravoepinto" target="_blank" class="youtube-button">YOUTUBE</a>
-        <a href="https://www.tiktok.com/@gravoepinto" target="_blank" class="tiktok-button">SIGA NO TIKTOK</a>
-      <p/>        
-        <p>Feito artesanalmente por Victor Alarcon.</p>
-        <small>© 2024 Victor Alarcon</small>
-        <address>????@email.com</address>
-    </div>
-</footer>
+     <footer>
+<a href="https://chat.whatsapp.com/K0RnliWuTf899D30sc0D2m" target="_blank" class="whatsapp-button">WHATSAPP</a>
+<a href="https://instagram.com/gravoepinto" target="_blank" class="insta-button">INSTAGRAM</a>
+<a href="https://www.youtube.com/@gravoepinto" target="_blank" class="youtube-button">YOUTUBE</a>
+<a href="https://www.tiktok.com/@gravoepinto" target="_blank" class="tiktok-button">SIGA NO TIKTOK</a>
+      <p>Feito artesanalmente por Victor Alarcon.</p>
+  <small>© 2024 Victor Alarcon</small>
+      <address>????@email.com</address>
+     </footer>
 
    
  <script src="https://cdn.jsdelivr.net/gh/MarketingPipeline/Markdown-Tag/markdown-tag.js"></script> 
