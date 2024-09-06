@@ -954,35 +954,3 @@ pre[class*="language-"] {
 .botao-vendas:visited {
     color: white; /* Cor do texto do botão */
 }
-
-
-/* Estilo do botão para botao de venda próximo lote*/
-        .botao-lote-futuro {
-            display: inline-block;
-            background-color: #FF8000; /* Laranjão característico do WhatsApp */
-            color: #fff; /* Texto branco */
-            padding: 25px 175px;
-            font-size: 16px;
-            text-align: center;
-            text-decoration: none;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            box-shadow: 0 4px 9px rgba(0, 0, 0, 0.1);
-            transition: all 0.3s ease;
-        }
-
-        .botao-lote-futuro:hover {
-            background-color: #994C00; /* Tom mais escuro do laranjão */
-            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
-            transform: translateY(-2px);
-        }
-
-        .botao-lote-futuron:focus,
-        .botao-vendas:active {
-            outline: none; /* Remove a borda padrão de foco */
-        }
-
-        .botao-lote-futuro:visited {
-            color: white; /* Cor do texto do botão */
-}
