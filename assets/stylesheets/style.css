@@ -19,15 +19,6 @@
   --disabled: #efefef;
 }
 
-/* Dark theme */
-
-
-
-@media (prefers-color-scheme: dark) {
-  
-	.anchorjs-link {
-    color: #ff5231;
-}
 
  code[class*="language-"],
 pre[class*="language-"] {
@@ -157,16 +148,7 @@ pre[class*="language-"] {
 	font-style: italic;
 }
  
-  :root {
-    --bg: #212121;
-    --accent-bg: #2b2b2b;
-    --text: #dcdcdc;
-    --text-light: #ababab;
-    --border: #666;
-    --accent: #ffb300;
-    --code: #f06292;
-    --preformatted: #ccc;
-    --disabled: #111;
+
   }
   /* Add a bit of transparancy so light media isn't so glaring in dark mode */
   img,
@@ -851,7 +833,7 @@ pre[class*="language-"] {
         }
 
         .youtube-button:hover {
-            background: #ff3333; /* Vermelho mais claro */
+            background: #ffffff; /* Vermelho mais claro */
             box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
             transform: translateY(-2px);
         }
@@ -889,6 +871,36 @@ pre[class*="language-"] {
     color: white; /* Cor do texto do botão */
 }
 
+/* Estilo do botão com cores do Substack */
+.substack-button {
+    display: inline-block;
+    background-color: #FF7731; /* Laanja do Substack */
+    color: #fff; /* Texto branco */
+    padding: 10px 20px;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 4px 9px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.substack-button:hover {
+    background-color: #010101; /* Rosa salmão do Substack */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px);
+}
+
+.substack-button:focus,
+.substack-button:active {
+    outline: none; /* Remove a borda padrão de foco */
+}
+
+.substack-button:visited {
+    color: white; /* Mantém o texto branco após visita */
+}
 
 /* Estilo do botão para WhatsApp */
         .whatsapp-button {
@@ -1047,7 +1059,12 @@ footer {
     align-items: center; /* Centraliza horizontalmente */
     gap: 20px; /* Espaço entre os elementos */
 }
-
+.footer-divider {
+  border: none;
+  height: 2px;
+  background: var(--border);
+  margin: 4rem 0;
+}
 .social-links {
     display: flex;
     gap: 10px; /* Espaço entre os ícones de redes sociais */
