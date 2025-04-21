@@ -1115,8 +1115,6 @@ footer {
   border: none; /* Remove bordas */
   
 }
-
-
 /* Estilo para a galeria */
 .gallery {
     display: flex;
@@ -1128,14 +1126,14 @@ footer {
 
 /* Estilo padrão para desktops */
 .gallery img {
-    width: 200px;
+    width: 300px;
     height: auto;
 }
 
 /* Estilo para telas menores (mobile) */
 @media (max-width: 768px) {
     .gallery img {
-        width: 45%; /* Largura relativa para telas pequenas */
+        width: 50%; /* Largura relativa para telas pequenas */
         margin: 10px;
     }
 }

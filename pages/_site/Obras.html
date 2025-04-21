@@ -27,32 +27,43 @@
 <body>
     <!-- Conteúdo Principal -->
     <main class="content">
-        <h1>Portfólio</h1>
-        
+        <h1>Disponíveis</h1>
 
-        <!-- Incorporação do PDF -->
-<div class="pdf-container">
-    <embed 
-        src="/assets/images/PORTFÓLIO SITE_compressed.pdf" 
-        type="application/pdf" 
-        width="960" 
-        height="569">
+   
+
+<!-- Galeria de Imagens -->
+<div class="gallery">
+    <p><img src="/assets/images/lagartao.png" alt="Imagem 1" data-full="assets/images/lagartao.png"></p>
+            <figcaption>Lagartão - Uma obra cheia de energia e movimento.</figcaption>
+
+    <p><img src="/assets/images/Gatos.png" alt="Imagem 1" data-full="/assets/images/lagartao.png"></p>
+    <p><img src="/assets/images/Lua_de_mel.png" alt="Imagem 1" data-full="/assets/images/lagartao.png"></p>
+    <p><img src="/assets/images/oMacaquinhoTabagista.png" alt="Imagem 1" data-full="/assets/images/lagartao.png"></p>
+    <p><img src="/assets/images/peçego.png" alt="Imagem 1" data-full="/assets/images/lagartao.png"></p>
+
 </div>
 
+<!-- Modal para Visualização Ampliada -->
+<div id="modal" class="modal">
+    <span class="close">&times;</span>
+    <img id="modal-img" src="" alt="Imagem Ampliada">
+</div>
 
+<!-- fim da galeria -->
+<h3><p><a href="/assets/images/Galeria de Arte do Victor Alarcon.pdf" target="_blank">Catálogo completo</a></p>
 
-<p>Não consegue visualizar o PDF? <a href="/assets/images/PORTFÓLIO SITE.pdf" target="_blank">Clique aqui para baixá-lo</a>.</p>
-
-    </main>
-
+</h3>
+<a href="https://web.whatsapp.com/send?phone=5511994906841&text=Ol%C3%A1.%20Me%20interessei%20por%20uma%20de%20suas%20pinturas%20%E2%80%94%20ainda%20%C3%A9%20poss%C3%ADvel%20adquirir%20alguma%20pe%C3%A7a%20dispon%C3%ADvel%3F" target="_blank">
+   <h3> Adquira pelo WhatsApp</h3>
+</a>
     <!-- Rodapé -->
 <footer>
   <div class="footer-content">
     <!-- Redes Sociais -->
     <div class="social-links">
-      <a href="https://chat.whatsapp.com/K0RnliWuTf899D30sc0D2m" target="_blank" class="whatsapp-button">WHATSAPP</a>
-      <a href="https://instagram.com/gravoepinto" target="_blank" class="insta-button">INSTAGRAM</a>
-      <a href="https://www.youtube.com/@gravoepinto" target="_blank" class="youtube-button">YOUTUBE</a>
+      <a href="https://chat.whatsapp.com/K0RnliWuTf899D30sc0D2m" target="_blank" class="tiktok-button">WHATSAPP</a>
+      <a href="https://instagram.com/gravoepinto" target="_blank" class="tiktok-button">INSTAGRAM</a>
+      <a href="https://www.youtube.com/@gravoepinto" target="_blank" class="tiktok-button">YOUTUBE</a>
       <a href="https://www.tiktok.com/@gravoepinto" target="_blank" class="tiktok-button">TIKTOK</a>
     </div>
 
@@ -86,5 +97,6 @@
     
   </div>
 </footer>
+<script src="/assets/script_da_galeria.js"></script>
 </body>
 </html>
