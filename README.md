@@ -1,73 +1,77 @@
-# Simply Docs
-<p align="center">
-  <img height="400" src="https://i.imgur.com/lRDqqVA.png" />
-</p>
-<div align="center">
-A simple, fast, free & easy to use static based plain HTML template. <br>  That allows you to make a beautiful personal / blog or technical documentation website really quickly.
-  
-  
-   <br>
-  <small> <b><i>Show your support!</i> </b></small>
-  <br>
-   <a href="https://github.com/MarketingPipeline/Simply-Docs">
-    <img title="Star on GitHub" src="https://img.shields.io/github/stars/MarketingPipeline/Simply-Docs.svg?style=social&label=Star">
-  </a>
-  <a href="https://github.com/MarketingPipeline/Simply-Docs/fork">
-    <img title="Fork on GitHub" src="https://img.shields.io/github/forks/MarketingPipeline/Simply-Docs.svg?style=social&label=Fork">
-  </a>
-   </p>  
- </div>
+# ovictoralarcon.github.io
 
+Site pessoal. Jekyll + GitHub Pages.
 
-## Features:
-  * Write in <b>Pure HTML</b> - there are NO CSS classes as it uses a <b>classless CSS <a href="https://github.com/kevquirk/simple.css">framework</a></b>
-* Ready to host on Github Pages!
-* Markdown Support - made possible by [Markdown Tag](https://github.com/MarketingPipeline/Markdown-Tag) 
-* Syntax Highlighting
-* Automagic flipping to dark mode.
-* Fully responsive.
-* Apply your own CSS style with ease!
-* Super lightweight & fast & easy to edit!
+## Estrutura
 
+```
+├── _config.yml          # Configuração geral
+├── _layouts/            # Templates HTML
+│   ├── default.html     # Layout base (header + footer)
+│   ├── post.html        # Layout para textos do blog
+│   └── obra.html        # Layout para obras individuais
+├── _obras/              # Coleção de obras (um .md por obra)
+├── _posts/              # Posts do blog (YYYY-MM-DD-titulo.md)
+├── pages/               # Páginas estáticas
+│   ├── obras.md
+│   ├── oficinas.md
+│   ├── textos.md
+│   ├── sobre.md
+│   └── contato.md
+├── assets/
+│   ├── css/main.css     # Todo o CSS em um arquivo
+│   └── img/             # Imagens (obras em assets/img/obras/)
+└── index.md             # Homepage
+```
 
-## Example and usage
+## Rodar localmente
 
-You can find the Github Pages hosted demo of Simply Docs [here.](https://marketingpipeline.github.io/Simply-Docs/)
+```bash
+bundle install
+bundle exec jekyll serve
+```
 
-To use this template on <b><i>Github Pages</b></i>:
+Abre em `http://localhost:4000`.
 
-- Use this
-[template](https://github.com/MarketingPipeline/Simply-Docs/generate)
-- <b>(Required)</b> Make changes in the head section of the HTML pages to match your GitHub Repo name.
-- Deploy to Github Pages
+## Adicionar uma obra
 
+Crie um arquivo em `_obras/nome-da-obra.md`:
 
-To use this template on your own <b><i>hosting provider</b></i>:
-- Download:
-[ZIP Folder](https://github.com/MarketingPipeline/Simply-Docs/archive/refs/heads/main.zip)
-- Extract ZIP Folder
-- <b>(Required)</b> Make changes in the head section of the HTML pages to match your corresponding directories.
-- Upload to hosting provider
+```yaml
+---
+layout: obra
+title: "Nome da Obra"
+tecnica: "Xilogravura"
+ano: 2024
+dimensoes: "30 × 40 cm"
+serie: "Nome da série"
+imagem: "/assets/img/obras/nome-do-arquivo.jpg"
+disponivel: true
+---
 
+Texto descritivo opcional.
+```
 
-## Pages
+## Adicionar um post
 
- * [Home Page](https://marketingpipeline.github.io/Simply-Docs/)
- * [Documentation Page](https://marketingpipeline.github.io/Simply-Docs/pages/documentation)
- * [News Page](https://marketingpipeline.github.io/Simply-Docs/pages/news)
- * [Blog Post Page](https://marketingpipeline.github.io/Simply-Docs/pages/blog-post)
- * [Author Page](https://marketingpipeline.github.io/Simply-Docs/pages/author)
+Crie um arquivo em `_posts/YYYY-MM-DD-titulo-do-post.md`:
 
-## Contributing ![GitHub](https://img.shields.io/github/contributors/MarketingPipeline/Simply-Docs)
+```yaml
+---
+layout: post
+title: "Título do post"
+subtitle: "Subtítulo opcional"
+category: "crítica"
+date: 2024-01-15
+---
 
-Want to suggest design changes? Create a pull request with an image of the page with your updated design changes! If approved you will be added to the list of contributors of this awesome project!
+Conteúdo em Markdown.
+```
 
-See also the list of
-[contributors](https://github.com/MarketingPipeline/Simply-Docs/graphs/contributors) who
-participate in this project.
+## Formulário de contato
 
-## License ![GitHub](https://img.shields.io/github/license/MarketingPipeline/Simply-Docs)
+O formulário usa Formspree. Crie uma conta em formspree.io, crie um formulário e substitua `YOUR_FORM_ID` em `pages/contato.md`.
 
-This project is licensed under the MIT License - see the
-[LICENSE.md](https://github.com/MarketingPipeline/Simply-Docs/blob/main/LICENSE) file for
-details.
+## Deploy
+
+Push para o branch `main`. O GitHub Pages gera o site automaticamente.

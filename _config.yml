@@ -1,0 +1,45 @@
+title: Victor Alarcon
+description: Artista visual, xilogravador, professor.
+url: "https://ovictoralarcon.github.io"
+baseurl: ""
+
+author:
+  name: Victor Alarcon
+  email: contato@ovictoralarcon.com
+
+
+# Build
+markdown: kramdown
+highlighter: rouge
+permalink: /:categories/:title/
+
+# Collections
+collections:
+  obras:
+    output: true
+    permalink: /obras/:name/
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+  - scope:
+      path: ""
+      type: "obras"
+    values:
+      layout: "obra"
+
+# Exclusions
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - README.md
+  - "*.git"
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag

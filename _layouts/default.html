@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% if page.title %}{{ page.title }} — {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
+  <meta name="description" content="{{ page.description | default: site.description }}">
+
+  <link rel="icon" type="image/png" href="{{ '/assets/images/favicon.png' | relative_url }}">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+  {% seo %}
+</head>
+<body{% if page.url == "/" %} class="is-home"{% endif %}>
+
+  {% unless page.url == "/" %}
+  <header class="site-header">
+    <div class="container">
+      <a href="{{ '/' | relative_url }}" class="site-logo">Victor Alarcon</a>
+      <nav class="site-nav">
+        <a href="{{ '/obras/' | relative_url }}"{% if page.url contains '/obras' %} class="active"{% endif %}>Obras</a>
+        <a href="{{ '/oficinas/' | relative_url }}"{% if page.url contains '/oficinas' %} class="active"{% endif %}>Oficinas</a>
+        <a href="{{ '/textos/' | relative_url }}"{% if page.url contains '/textos' %} class="active"{% endif %}>Textos</a>
+        <a href="{{ '/sobre/' | relative_url }}"{% if page.url contains '/sobre' %} class="active"{% endif %}>Sobre</a>
+        <a href="{{ '/contato/' | relative_url }}"{% if page.url contains '/contato' %} class="active"{% endif %}>Contato</a>
+      </nav>
+    </div>
+  </header>
+  {% endunless %}
+
+  <main>
+    {{ content }}
+  </main>
+
+  {% unless page.url == "/" %}
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <span class="footer-label">Victor Alarcon</span>
+          <p>São Paulo, Brasil</p>
+        </div>
+        <div class="footer-col">
+          <span class="footer-label">Canal</span>
+          <ul>
+
+            <li><a href="https://victoralarcon.substack.com/" target="_blank" rel="noopener">Substack</a></li>
+            <li><a href="https://www.instagram.com/victoralarcon.arte" target="_blank" rel="noopener">Instagram</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <span class="footer-label">Contato</span>
+          <ul>
+            <li><a href="{{ '/contato/' | relative_url }}">Mensagem</a></li>
+            <li><a href="{{ '/oficinas/' | relative_url }}">Oficinas</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-base">
+        <span>© {{ 'now' | date: "%Y" }} Victor Alarcon</span>
+      </div>
+    </div>
+  </footer>
+  {% endunless %}
+
+</body>
+</html>

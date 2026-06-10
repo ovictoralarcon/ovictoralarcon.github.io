@@ -1,0 +1,58 @@
+---
+layout: default
+---
+
+<article class="obra-single">
+  <div class="container">
+
+    <div class="obra-grid">
+      <div class="obra-imagem">
+        {% assign url = content | split: 'src="' | last | split: '"' | first %}
+        {% if url contains 'http' %}
+          <img src="{{ url }}" alt="{{ page.titulo }}">
+        {% endif %}
+      </div>
+
+      <div class="obra-info">
+        <div class="obra-meta">
+          {% if page.tecnica %}<span class="label">{{ page.tecnica | upcase }}</span>{% endif %}
+          {% if page.suporte %}<span class="label">{{ page.suporte | upcase }}</span>{% endif %}
+          {% if page.ano %}<span class="label">{{ page.ano }}</span>{% endif %}
+        </div>
+
+        <h1 class="obra-titulo">{{ page.titulo | default: page.title }}</h1>
+
+        {% if page.dimensoes %}
+          <p class="obra-dimensoes">{{ page.dimensoes }}</p>
+        {% endif %}
+
+        {% if page.serie and page.serie != "" %}
+          <p class="obra-serie">Série: {{ page.serie }}</p>
+        {% endif %}
+
+        {% if page.tiragem_total %}
+          <p class="obra-serie">Tiragem: {{ page.numero_exemplar }}/{{ page.tiragem_total }}</p>
+        {% endif %}
+
+        {% assign descricao = content | split: '## Descrição' | last | split: '## Notas internas' | first | strip %}
+        {% if descricao != "" %}
+        <div class="obra-descricao">
+          {{ descricao }}
+        </div>
+        {% endif %}
+
+        {% assign status_lower = page.status | downcase %}
+        {% if status_lower == "disponível" or status_lower == "disponivel" %}
+        <div class="obra-cta">
+          <a href="{{ '/contato/' | relative_url }}" class="btn">Consultar disponibilidade</a>
+        </div>
+        {% endif %}
+      </div>
+    </div>
+
+    <div class="obra-nav">
+      <a href="{{ '/obras/' | relative_url }}" class="back-link">← Obras</a>
+    </div>
+
+  </div>
+</article>
