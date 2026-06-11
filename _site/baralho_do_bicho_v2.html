@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Baralho do Bicho — Diga Não às Bets</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Playfair+Display:ital,wght@0,700;1,700&family=Special+Elite&family=Cabin:wght@400;700&display=swap');
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --verde: #1a5c2a;
+    --vermelho: #c0271a;
+    --amarelo: #f5c842;
+    --creme: #f5edd6;
+    --marrom: #3a1f0a;
+  }
+
+  body {
+    background-color: var(--creme);
+    color: var(--marrom);
+    font-family: 'Cabin', sans-serif;
+    overflow-x: hidden;
+  }
+
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.06'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 999;
+    opacity: 0.5;
+  }
+
+  /* HEADER STRIP */
+  .header-strip {
+    background: var(--marrom);
+    color: var(--amarelo);
+    text-align: center;
+    padding: 7px 12px;
+    font-family: 'Special Elite', monospace;
+    font-size: 12px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+
+  /* HERO */
+  .hero {
+    background: var(--verde);
+    padding: 56px 24px 48px;
+    text-align: center;
+    border-bottom: 6px solid var(--marrom);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero::before {
+    content: '🐍🦎🐊🐘🦅🐆🦁🐍🦎🐊🐘🦅🐆🦁';
+    position: absolute;
+    top: 10px; left: 0; right: 0;
+    font-size: 18px;
+    opacity: 0.12;
+    letter-spacing: 8px;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+
+  .hero::after {
+    content: '🐍🦎🐊🐘🦅🐆🦁🐍🦎🐊🐘🦅🐆🦁';
+    position: absolute;
+    bottom: 10px; left: 0; right: 0;
+    font-size: 18px;
+    opacity: 0.12;
+    letter-spacing: 8px;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+
+  .hero-eyebrow {
+    font-family: 'Special Elite', monospace;
+    color: var(--amarelo);
+    font-size: 12px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    opacity: 0.7;
+  }
+
+  .hero-title {
+    font-family: 'Bebas Neue', sans-serif;
+    color: var(--amarelo);
+    font-size: clamp(52px, 11vw, 104px);
+    line-height: 0.92;
+    letter-spacing: 1px;
+    margin-bottom: 4px;
+    text-shadow: 4px 4px 0px var(--marrom);
+  }
+
+  .hero-title .linha2 {
+    color: white;
+    display: block;
+    font-size: clamp(32px, 6.5vw, 68px);
+  }
+
+  .hero-title .linha3 {
+    color: var(--amarelo);
+    display: block;
+    font-size: clamp(52px, 11vw, 104px);
+  }
+
+  .hero-subtitle {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    color: var(--creme);
+    font-size: clamp(15px, 2.5vw, 21px);
+    margin: 24px auto 36px;
+    max-width: 520px;
+    line-height: 1.5;
+    opacity: 0.88;
+  }
+
+  .hero-badge {
+    display: inline-block;
+    background: var(--amarelo);
+    color: var(--marrom);
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 21px;
+    padding: 11px 34px;
+    border: 3px solid var(--marrom);
+    letter-spacing: 2px;
+    transform: rotate(-1.5deg);
+    box-shadow: 4px 4px 0 var(--marrom);
+    text-decoration: none;
+    animation: badge-pulse 2.5s ease-in-out infinite;
+  }
+
+  @keyframes badge-pulse {
+    0%, 100% { transform: rotate(-1.5deg) scale(1); }
+    50% { transform: rotate(-1.5deg) scale(1.04); }
+  }
+
+  /* MARQUEE */
+  .divider {
+    background: var(--amarelo);
+    border-top: 3px solid var(--marrom);
+    border-bottom: 3px solid var(--marrom);
+    padding: 10px 0;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 17px;
+    letter-spacing: 5px;
+    color: var(--marrom);
+    overflow: hidden;
+    white-space: nowrap;
+  }
+
+  .divider-inner {
+    display: inline-block;
+    animation: marquee 20s linear infinite;
+  }
+
+  @keyframes marquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+
+  /* CONVERSA — seção Zeca */
+  .conversa {
+    background: var(--creme);
+    padding: 56px 24px;
+    border-bottom: 4px solid var(--marrom);
+  }
+
+  .conversa-inner {
+    max-width: 620px;
+    margin: 0 auto;
+  }
+
+  .conversa p {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(17px, 2.5vw, 22px);
+    line-height: 1.75;
+    color: var(--marrom);
+    margin-bottom: 20px;
+  }
+
+  .conversa p em {
+    font-style: italic;
+    color: var(--vermelho);
+  }
+
+  .conversa .assinatura {
+    font-family: 'Special Elite', monospace;
+    font-size: 12px;
+    letter-spacing: 3px;
+    opacity: 0.45;
+    text-transform: uppercase;
+    margin-top: 32px;
+  }
+
+  /* MANIFESTO — fundo vermelho */
+  .manifesto {
+    background: var(--vermelho);
+    color: white;
+    padding: 48px 24px;
+    border-bottom: 6px double var(--marrom);
+  }
+
+  .manifesto-inner {
+    max-width: 640px;
+    margin: 0 auto;
+  }
+
+  .manifesto-label {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 11px;
+    letter-spacing: 5px;
+    background: var(--amarelo);
+    color: var(--marrom);
+    display: inline-block;
+    padding: 3px 10px;
+    margin-bottom: 18px;
+  }
+
+  .manifesto h2 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(30px, 6vw, 58px);
+    line-height: 1.0;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+  }
+
+  .manifesto p {
+    font-family: 'Special Elite', monospace;
+    font-size: 15px;
+    line-height: 1.8;
+    opacity: 0.9;
+    max-width: 540px;
+    margin-bottom: 14px;
+  }
+
+  .manifesto p strong {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 19px;
+    letter-spacing: 1px;
+    display: block;
+    margin: 18px 0 6px;
+    opacity: 1;
+  }
+
+  /* PRODUTO */
+  .produto {
+    padding: 56px 24px;
+    background: var(--creme);
+    border-bottom: 6px solid var(--marrom);
+  }
+
+  .produto-inner {
+    max-width: 740px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    align-items: start;
+  }
+
+  @media (max-width: 600px) {
+    .produto-inner { grid-template-columns: 1fr; }
+  }
+
+  .card-stack {
+    position: relative;
+    width: 180px;
+    height: 250px;
+    margin: 0 auto 12px;
+  }
+
+  .card {
+    position: absolute;
+    width: 158px;
+    height: 218px;
+    border-radius: 8px;
+    border: 3px solid var(--marrom);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 62px;
+    box-shadow: 3px 3px 0 var(--marrom);
+  }
+
+  .card:nth-child(1) { background: var(--verde); top: 0; left: 22px; transform: rotate(-8deg); }
+  .card:nth-child(2) { background: var(--vermelho); top: 10px; left: 11px; transform: rotate(-3deg); }
+  .card:nth-child(3) { background: var(--amarelo); top: 18px; left: 0; transform: rotate(2deg); animation: float 3s ease-in-out infinite; }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0) rotate(2deg); }
+    50% { transform: translateY(-8px) rotate(2deg); }
+  }
+
+  .card-label {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 13px;
+    letter-spacing: 2px;
+    margin-top: 6px;
+    color: white;
+  }
+
+  .card:nth-child(3) .card-label { color: var(--marrom); }
+
+  .visual-caption {
+    text-align: center;
+    font-family: 'Special Elite', monospace;
+    font-size: 11px;
+    opacity: 0.5;
+    letter-spacing: 2px;
+    margin-top: 8px;
+  }
+
+  .produto-texto h2 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 40px;
+    color: var(--marrom);
+    line-height: 1.05;
+    margin-bottom: 14px;
+  }
+
+  .produto-texto h2 em {
+    font-style: normal;
+    color: var(--vermelho);
+  }
+
+  .produto-texto p {
+    font-size: 15px;
+    line-height: 1.75;
+    margin-bottom: 12px;
+    opacity: 0.85;
+  }
+
+  .features {
+    margin: 18px 0 0;
+    list-style: none;
+  }
+
+  .features li {
+    font-family: 'Special Elite', monospace;
+    font-size: 13.5px;
+    padding: 7px 0;
+    border-bottom: 1px dashed rgba(58,31,10,0.25);
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    line-height: 1.4;
+  }
+
+  .features li::before {
+    content: '✦';
+    color: var(--vermelho);
+    flex-shrink: 0;
+    margin-top: 1px;
+  }
+
+  /* DEPOIMENTOS */
+  .depoimentos {
+    background: var(--marrom);
+    padding: 52px 24px;
+    border-top: 6px solid var(--amarelo);
+    border-bottom: 6px solid var(--amarelo);
+  }
+
+  .dep-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 38px;
+    color: var(--amarelo);
+    text-align: center;
+    margin-bottom: 36px;
+    letter-spacing: 2px;
+  }
+
+  .dep-grid {
+    max-width: 740px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    gap: 20px;
+  }
+
+  .dep-card {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(245,200,66,0.25);
+    padding: 22px 18px 16px;
+    position: relative;
+  }
+
+  .dep-card::before {
+    content: '"';
+    font-family: 'Playfair Display', serif;
+    font-size: 80px;
+    color: var(--amarelo);
+    opacity: 0.15;
+    position: absolute;
+    top: -12px;
+    left: 12px;
+    line-height: 1;
+  }
+
+  .dep-text {
+    font-family: 'Special Elite', monospace;
+    font-size: 13px;
+    color: var(--creme);
+    line-height: 1.65;
+    margin-bottom: 14px;
+    opacity: 0.88;
+  }
+
+  .dep-autor {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 13px;
+    color: var(--amarelo);
+    letter-spacing: 2px;
+  }
+
+  /* OFERTA */
+  .oferta {
+    background: var(--amarelo);
+    padding: 60px 24px;
+    text-align: center;
+    border-bottom: 6px solid var(--marrom);
+    position: relative;
+  }
+
+  .oferta::before {
+    content: '★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★ ★';
+    display: block;
+    font-size: 13px;
+    color: var(--marrom);
+    opacity: 0.25;
+    margin-bottom: 36px;
+    letter-spacing: 6px;
+    overflow: hidden;
+  }
+
+  .oferta-inner { max-width: 540px; margin: 0 auto; }
+
+  .oferta h2 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(38px, 8vw, 76px);
+    color: var(--marrom);
+    line-height: 1;
+    margin-bottom: 14px;
+    text-shadow: 3px 3px 0 rgba(0,0,0,0.12);
+  }
+
+  .oferta-desc {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 16px;
+    color: var(--marrom);
+    line-height: 1.7;
+    margin-bottom: 32px;
+    opacity: 0.8;
+  }
+
+  .cta-btn {
+    display: inline-block;
+    background: var(--verde);
+    color: var(--amarelo);
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 27px;
+    letter-spacing: 3px;
+    padding: 18px 50px;
+    border: 4px solid var(--marrom);
+    box-shadow: 5px 5px 0 var(--marrom);
+    cursor: pointer;
+    transition: transform 0.1s, box-shadow 0.1s;
+    text-decoration: none;
+  }
+
+  .cta-btn:hover {
+    transform: translate(2px, 2px);
+    box-shadow: 3px 3px 0 var(--marrom);
+  }
+
+  .urgencia {
+    margin-top: 20px;
+    font-family: 'Special Elite', monospace;
+    font-size: 12px;
+    color: var(--vermelho);
+    letter-spacing: 1px;
+    opacity: 0.85;
+  }
+
+  /* RODAPÉ */
+  .rodape {
+    background: var(--marrom);
+    color: var(--creme);
+    text-align: center;
+    padding: 30px 24px;
+    font-family: 'Special Elite', monospace;
+    font-size: 12px;
+    line-height: 1.9;
+  }
+
+  .rodape em { color: var(--amarelo); font-style: normal; }
+
+  .rodape .disclaimer {
+    margin-top: 10px;
+    opacity: 0.4;
+    font-size: 10.5px;
+    line-height: 1.7;
+  }
+</style>
+</head>
+<body>
+
+<!-- TOPO -->
+<div class="header-strip">
+  ⚠ &nbsp; Betezinha gringa não sonha. Betezinha gringa não sabe o que é Avestruz. &nbsp; ⚠
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <p class="hero-eyebrow">Produto Brasileiro · Feito à Mão · Xilogravura de Verdade</p>
+  <h1 class="hero-title">
+    Diga não às bets.
+    <span class="linha2">Jogue no</span>
+    <span class="linha3">Bicho.</span>
+  </h1>
+  <p class="hero-subtitle">
+    Essas betezinhas aí não são pra mim.<br>
+    Eu ainda gosto de sonhar com um bicho.
+  </p>
+  <a href="#oferta" class="hero-badge">Quero meu Baralho do Bicho →</a>
+</section>
+
+<!-- MARQUEE -->
+<div class="divider">
+  <span class="divider-inner">
+    JACARÉ &bull; ELEFANTE &bull; COBRA &bull; GALO &bull; MACACO &bull; LEÃO &bull; CAVALO &bull; LAGARTO &bull; BORBOLETA &bull; VEADO &bull; TOURO &bull; GATO &bull; AVESTRUZ &bull; CACHORRO &bull; COELHO &bull; JACARÉ &bull; ELEFANTE &bull; COBRA &bull; GALO &bull; MACACO &bull; LEÃO &bull; CAVALO &bull; LAGARTO &bull; BORBOLETA &bull; VEADO &bull; TOURO &bull; GATO &bull; AVESTRUZ &bull; CACHORRO &bull; COELHO &bull;&nbsp;
+  </span>
+</div>
+
+<!-- CONVERSA -->
+<section class="conversa">
+  <div class="conversa-inner">
+    <p>Eu gosto de acordar e lembrar do que sonhei.</p>
+    <p>Não é todo dia que vem um bicho. Mas quando vem — uma cobra, um cavalo, um gato passando devagar — a gente sabe que tem recado ali. Aí você pergunta pro vizinho. Ele já viu algum sinal. A mulher da padaria tem opinião. O cara do ponto de ônibus também.</p>
+    <p><em>É assim que funciona. Sempre foi assim.</em></p>
+    <p>Só que nem todo dia a intuição aparece. Aí vem aquela vontade de fazer uma fezinha e a gente não lembrou de nada, não viu nada, não sonhou com bicho nenhum.</p>
+    <p>É nessa hora que as betezinhas entram — ficam piscando na tela, mandando notificação, com odds, com isso, com aquilo. Não entendo. Não quero entender.</p>
+    <p><em>Sonho é sonho. Não é coisa pra ficar na mão de aplicativo.</em></p>
+    <div class="assinatura">· · · Uma conversa de esquina · · ·</div>
+  </div>
+</section>
+
+<!-- MANIFESTO -->
+<section class="manifesto">
+  <div class="manifesto-inner">
+    <div class="manifesto-label">ALERTA DE UTILIDADE PÚBLICA</div>
+    <h2>Diga não às bets.<br>Jogue no bicho.</h2>
+    <p>Todo ano, bilhões de reais saem do Brasil e vão parar nos cofres de empresas estrangeiras que nunca sonharam com cobra e não sabem a diferença entre Avestruz e Borboleta.</p>
+    <p>Enquanto isso, o jogo do bicho — sistema de apostas centenário, radicalmente brasileiro, democraticamente distribuído nas esquinas de todo o país — foi empurrado pra ilegalidade.</p>
+    <p><strong>A bet é regulamentada. O bicho, não.<br>Pense nisso.</strong></p>
+  </div>
+</section>
+
+<!-- PRODUTO -->
+<section class="produto">
+  <div class="produto-inner">
+    <div class="produto-visual">
+      <div class="card-stack">
+        <div class="card"><span>🦁</span><span class="card-label">LEÃO</span></div>
+        <div class="card"><span>🐊</span><span class="card-label">JACARÉ</span></div>
+        <div class="card"><span>🦋</span><span class="card-label">BORBOLETA</span></div>
+      </div>
+      <p class="visual-caption">FEITO À MÃO · XILOGRAVURA ORIGINAL</p>
+    </div>
+
+    <div class="produto-texto">
+      <h2>O Baralho do Bicho:<br>um baralho <em>de verdade</em></h2>
+      <p>O Baralho do Bicho é pra quando a intuição falha um pouco. Quando você acordou sem lembrar de nada, mas a vontade de fazer uma fezinha tá lá.</p>
+      <p>Cada carta foi gravada em madeira e impressa à mão. Você embaralha, tira uma carta e deixa a conversa acontecer. Simples assim.</p>
+      <ul class="features">
+        <li>Ferramenta de palpite baseada em tradição popular</li>
+        <li>Peça colecionável — arte gráfica em xilogravura original</li>
+        <li>Sem algoritmo. Sem notificação. Sem enganação.</li>
+        <li>Bonito de usar, bonito de guardar, bonito de mostrar</li>
+        <li>É seu — não é do servidor de ninguém</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- DEPOIMENTOS -->
+<section class="depoimentos">
+  <h2 class="dep-title">Quem já tem o Baralho fala:</h2>
+  <div class="dep-grid">
+    <div class="dep-card">
+      <p class="dep-text">Tirei a carta do Gato numa terça. Na sexta meu vizinho apareceu com um gato perdido. Não sei o que dizer.</p>
+      <div class="dep-autor">🐱 &nbsp; Seu Otoniel, SP</div>
+    </div>
+    <div class="dep-card">
+      <p class="dep-text">Não entendo de odds. Nunca entendi. Agora não preciso mais fingir que entendo.</p>
+      <div class="dep-autor">🦎 &nbsp; Dona Carminha, RJ</div>
+    </div>
+    <div class="dep-card">
+      <p class="dep-text">Comprei achando que era bobagem. Tá emoldurado na sala.</p>
+      <div class="dep-autor">🦋 &nbsp; Marquinhos, BH</div>
+    </div>
+  </div>
+</section>
+
+<!-- OFERTA -->
+<section class="oferta" id="oferta">
+  <div class="oferta-inner">
+    <h2>Garanta seu<br>Baralho do Bicho</h2>
+    <p class="oferta-desc">
+      Uma ferramenta de palpite.<br>
+      Uma obra de arte.<br>
+      Um pedaço da nossa história que cabe no bolso.
+    </p>
+    <a href="#" class="cta-btn">Quero meu Baralho</a>
+    <p class="urgencia">⚠ &nbsp; Enquanto você lê isso, alguém está errando o palpite por falta de baralho.</p>
+  </div>
+</section>
+
+<!-- RODAPÉ -->
+<footer class="rodape">
+  <p><em>Baralho do Bicho</em> — Arte Gráfica · Xilogravura · Cultura Popular Brasileira</p>
+  <p class="disclaimer">
+    Este produto não garante ganhos, não é responsável por palpites errados, sonhos mal interpretados<br>
+    nem pelo fato de o seu vizinho ter aparecido com um gato justo na semana que você tirou a carta do Gato.<br>
+    <em>Jogue com responsabilidade. E com tradição.</em>
+  </p>
+</footer>
+
+</body>
+</html>

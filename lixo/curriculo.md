@@ -1,0 +1,4 @@
+---
+layout: obra
+title: "Curriculo"
+---

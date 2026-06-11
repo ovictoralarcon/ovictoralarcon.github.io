@@ -6,7 +6,7 @@
   <title>{% if page.title %}{{ page.title }} — {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
   <meta name="description" content="{{ page.description | default: site.description }}">
 
-  <link rel="icon" type="image/png" href="{{ '/assets/images/favicon.png' | relative_url }}">
+  <link rel="icon" type="image/png" href="{{ '/assets/img/favicon.png' | relative_url }}">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -23,7 +23,7 @@
       <a href="{{ '/' | relative_url }}" class="site-logo">Victor Alarcon</a>
       <nav class="site-nav">
         <a href="{{ '/obras/' | relative_url }}"{% if page.url contains '/obras' %} class="active"{% endif %}>Obras</a>
-        <a href="{{ '/oficinas/' | relative_url }}"{% if page.url contains '/oficinas' %} class="active"{% endif %}>Oficinas</a>
+        <a href="{{ '/ensino/' | relative_url }}"{% if page.url contains '/ensino' %} class="active"{% endif %}>Ensino</a>
         <a href="{{ '/textos/' | relative_url }}"{% if page.url contains '/textos' %} class="active"{% endif %}>Textos</a>
         <a href="{{ '/sobre/' | relative_url }}"{% if page.url contains '/sobre' %} class="active"{% endif %}>Sobre</a>
         <a href="{{ '/contato/' | relative_url }}"{% if page.url contains '/contato' %} class="active"{% endif %}>Contato</a>
@@ -56,7 +56,7 @@
           <span class="footer-label">Contato</span>
           <ul>
             <li><a href="{{ '/contato/' | relative_url }}">Mensagem</a></li>
-            <li><a href="{{ '/oficinas/' | relative_url }}">Oficinas</a></li>
+            <li><a href="{{ '/Ensino/' | relative_url }}">Ensino</a></li>
           </ul>
         </div>
       </div>

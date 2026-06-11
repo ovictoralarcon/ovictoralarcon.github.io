@@ -5,8 +5,7 @@ baseurl: ""
 
 author:
   name: Victor Alarcon
-  email: contato@ovictoralarcon.com
-
+  email: ovictoralarcon@gmail.com
 
 # Build
 markdown: kramdown
@@ -18,6 +17,9 @@ collections:
   obras:
     output: true
     permalink: /obras/:name/
+  cursos:
+    output: true
+    permalink: /ensino/:name/
 
 # Defaults
 defaults:

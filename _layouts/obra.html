@@ -7,46 +7,35 @@ layout: default
 
     <div class="obra-grid">
       <div class="obra-imagem">
-        {% assign url = content | split: 'src="' | last | split: '"' | first %}
-        {% if url contains 'http' %}
-          <img src="{{ url }}" alt="{{ page.titulo }}">
+        {% if page.imagem %}
+          <img src="{{ page.imagem }}" alt="{{ page.titulo | default: page.title }}">
         {% endif %}
       </div>
 
       <div class="obra-info">
-        <div class="obra-meta">
-          {% if page.tecnica %}<span class="label">{{ page.tecnica | upcase }}</span>{% endif %}
-          {% if page.suporte %}<span class="label">{{ page.suporte | upcase }}</span>{% endif %}
-          {% if page.ano %}<span class="label">{{ page.ano }}</span>{% endif %}
-        </div>
 
         <h1 class="obra-titulo">{{ page.titulo | default: page.title }}</h1>
 
-        {% if page.dimensoes %}
-          <p class="obra-dimensoes">{{ page.dimensoes }}</p>
-        {% endif %}
-
-        {% if page.serie and page.serie != "" %}
-          <p class="obra-serie">Série: {{ page.serie }}</p>
-        {% endif %}
-
-        {% if page.tiragem_total %}
-          <p class="obra-serie">Tiragem: {{ page.numero_exemplar }}/{{ page.tiragem_total }}</p>
-        {% endif %}
-
-        {% assign descricao = content | split: '## Descrição' | last | split: '## Notas internas' | first | strip %}
-        {% if descricao != "" %}
-        <div class="obra-descricao">
-          {{ descricao }}
+        <div class="obra-ficha">
+          {% if page.tecnica %}
+            {% if page.suporte and page.suporte != "" %}
+              <p>{{ page.tecnica }} sobre {{ page.suporte }}</p>
+            {% else %}
+              <p>{{ page.tecnica }}</p>
+            {% endif %}
+          {% endif %}
+          {% if page.dimensoes %}<p>{{ page.dimensoes }}</p>{% endif %}
+          {% if page.ano %}<p>{{ page.ano }}</p>{% endif %}
+          {% if page.serie and page.serie != "" %}<p>Série: {{ page.serie }}</p>{% endif %}
+          {% if page.tiragem_total %}<p>Tiragem: {{ page.numero_exemplar }}/{{ page.tiragem_total }}</p>{% endif %}
         </div>
+
+        {% if page.content and page.content != "" %}
+          <div class="obra-descricao">{{ content }}</div>
         {% endif %}
 
-        {% assign status_lower = page.status | downcase %}
-        {% if status_lower == "disponível" or status_lower == "disponivel" %}
-        <div class="obra-cta">
-          <a href="{{ '/contato/' | relative_url }}" class="btn">Consultar disponibilidade</a>
-        </div>
-        {% endif %}
+
+
       </div>
     </div>
 

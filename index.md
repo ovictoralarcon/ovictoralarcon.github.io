@@ -13,7 +13,7 @@ description: Artista visual, xilogravador, professor. São Paulo.
     <a href="{{ '/' | relative_url }}" class="home-menu__nome">Victor Alarcon</a>
     <ul class="home-menu__lista">
       <li><a href="{{ '/obras/' | relative_url }}">Obras</a></li>
-      <li><a href="{{ '/oficinas/' | relative_url }}">Oficinas</a></li>
+      <li><a href="{{ '/ensino/' | relative_url }}">Ensino</a></li>
       <li><a href="{{ '/textos/' | relative_url }}">Textos</a></li>
       <li><a href="{{ '/sobre/' | relative_url }}">Sobre</a></li>
       <li><a href="{{ '/contato/' | relative_url }}">Contato</a></li>
