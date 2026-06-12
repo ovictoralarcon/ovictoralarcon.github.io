@@ -9,6 +9,7 @@ status: "disponível"
 localizacao: "Ateliê"
 data_registro: "2026-05-15"
 preco: 1254.50
+imagem: "https://res.cloudinary.com/divlykiqq/image/upload/v1781232074/2023_tempera-ovo_comer-e-dormir-como-um-porco_yxspfi.jpg"
 ---
 
 ![][2023_tempera-ovo_comer-e-dormir-como-um-porco.jpg]

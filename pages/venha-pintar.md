@@ -1,16 +1,16 @@
 ---
 layout: default
-title: Ensino
+title: venha-pintar
 description: Aulas e oficinas de pintura com Victor Alarcon — gouache, têmpera de ovo.
-permalink: /ensino/
+permalink: /venha-pintar/
 ---
 
 <section class="page-hero">
   <div class="container">
     <div class="page-hero__eyebrow">
-      <span class="label">Ensino</span>
+      <span class="label">venha-pintar</span>
     </div>
-    <h1 class="page-hero__titulo">Ensino</h1>
+    <h1 class="page-hero__titulo">Venha Pintar</h1>
     <p class="page-hero__subtitulo">Aulas individuais e oficinas em grupo. Técnica tradicional, materiais reais, sem conversa.</p>
   </div>
 </section>

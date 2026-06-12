@@ -12,6 +12,7 @@ permalink: /obras/
     </div>
     <h1 class="page-hero__titulo">Obras</h1>
     <p class="page-hero__subtitulo"><a href="{{ '/catalogo/' | relative_url }}" style="border-bottom: 1px solid currentColor;">Ver obras disponíveis →</a></p>
+    <a href="{{ '/assets/pdf/portfolio.pdf' | relative_url }}" target="_blank">Portfólio PDF →</a>
   </div>
 </section>
 

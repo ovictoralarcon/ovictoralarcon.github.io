@@ -335,20 +335,19 @@ h1, h2, h3 {
 }
 
 .obra-card__imagem {
-  aspect-ratio: 4 / 3;
   overflow: hidden;
   background-color: var(--cor-linha);
 }
 
 .obra-card__imagem img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.5s ease;
+  height: auto;
+  display: block;
+  transition: opacity 0.3s ease;
 }
 
 .obra-card:hover .obra-card__imagem img {
-  transform: scale(1.02);
+  opacity: 0.92;
 }
 
 .obra-card__meta {
