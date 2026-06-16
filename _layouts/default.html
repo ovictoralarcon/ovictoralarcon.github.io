@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{% if page.title %}{{ page.title }} — {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
+  <title>{% assign _titulo = page.title | default: page.titulo %}{% if _titulo %}{{ _titulo }} — {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
   <meta name="description" content="{{ page.description | default: site.description }}">
 
-  <link rel="icon" type="image/png" href="{{ '/assets/img/favicon.png' | relative_url }}">
+  <link rel="icon" type="image/png" href="{{ '/assets/images/favicon.png' | relative_url }}">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -23,7 +23,7 @@
       <a href="{{ '/' | relative_url }}" class="site-logo">Victor Alarcon</a>
       <nav class="site-nav">
         <a href="{{ '/obras/' | relative_url }}"{% if page.url contains '/obras' %} class="active"{% endif %}>Obras</a>
-        <a href="{{ '/venha-pintar/' | relative_url }}"{% if page.url contains '/venha-pintar' %} class="active"{% endif %}>venha-pintar</a>
+        <a href="{{ '/venha-pintar/' | relative_url }}"{% if page.url contains '/venha-pintar' %} class="active"{% endif %}>Venha Pintar</a>
         <a href="{{ '/textos/' | relative_url }}"{% if page.url contains '/textos' %} class="active"{% endif %}>Textos</a>
         <a href="{{ '/sobre/' | relative_url }}"{% if page.url contains '/sobre' %} class="active"{% endif %}>Sobre</a>
         <a href="{{ '/contato/' | relative_url }}"{% if page.url contains '/contato' %} class="active"{% endif %}>Contato</a>
@@ -47,16 +47,16 @@
         <div class="footer-col">
           <span class="footer-label">Canal</span>
           <ul>
-
-            <li><a href="https://victoralarcon.substack.com/" target="_blank" rel="noopener">Substack</a></li>
-            <li><a href="https://www.instagram.com/victoralarcon.arte" target="_blank" rel="noopener">Instagram</a></li>
+            <li><a href="https://youtube.com/@ovictoralarcon" target="_blank" rel="noopener">YouTube</a></li>
+            <li><a href="https://substack.com/@ovictoralarcon" target="_blank" rel="noopener">Substack</a></li>
+            <li><a href="https://instagram.com/ovictoralarcon" target="_blank" rel="noopener">Instagram</a></li>
           </ul>
         </div>
         <div class="footer-col">
           <span class="footer-label">Contato</span>
           <ul>
             <li><a href="{{ '/contato/' | relative_url }}">Mensagem</a></li>
-            <li><a href="{{ '/venha-pintar/' | relative_url }}">venha-pintar</a></li>
+            <li><a href="{{ '/venha-pintar/' | relative_url }}">Venha Pintar</a></li>
           </ul>
         </div>
       </div>

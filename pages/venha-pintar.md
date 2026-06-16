@@ -1,17 +1,16 @@
 ---
 layout: default
-title: venha-pintar
-description: Aulas e oficinas de pintura com Victor Alarcon — gouache, têmpera de ovo.
+title: Venha Pintar
+description: Aulas e mentorias de pintura com Victor Alarcon.
 permalink: /venha-pintar/
 ---
 
 <section class="page-hero">
   <div class="container">
     <div class="page-hero__eyebrow">
-      <span class="label">venha-pintar</span>
+      <span class="label">Venha Pintar</span>
     </div>
     <h1 class="page-hero__titulo">Venha Pintar</h1>
-    <p class="page-hero__subtitulo">Aulas individuais e oficinas em grupo. Técnica tradicional, materiais reais, sem conversa.</p>
   </div>
 </section>
 
@@ -19,15 +18,8 @@ permalink: /venha-pintar/
   {% assign cursos = site.cursos | where: "ativo", true | sort: "ordem" %}
   {% for curso in cursos %}
   <a href="{{ curso.url | relative_url }}" class="curso-item">
-    <div class="curso-item__info">
-      <span class="label">{{ curso.formato | upcase }}</span>
-      <h2 class="curso-item__titulo">{{ curso.title }}</h2>
-      {% if curso.descricao %}<p class="curso-item__desc">{{ curso.descricao }}</p>{% endif %}
-    </div>
-    <div class="curso-item__meta">
-      {% if curso.preco %}<span class="curso-item__preco">{{ curso.preco }}</span>{% endif %}
-      <span class="curso-item__seta">→</span>
-    </div>
+    <h2 class="curso-item__titulo">{{ curso.title }}</h2>
+    <span class="curso-item__seta">→</span>
   </a>
   {% endfor %}
 </section>

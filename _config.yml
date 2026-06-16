@@ -5,7 +5,8 @@ baseurl: ""
 
 author:
   name: Victor Alarcon
-  email: ovictoralarcon@gmail.com
+  email: contato@ovictoralarcon.com
+  whatsapp_numero: "11994906841"
 
 # Build
 markdown: kramdown
@@ -19,7 +20,7 @@ collections:
     permalink: /obras/:name/
   cursos:
     output: true
-    permalink: /ensino/:name/
+    permalink: /venha-pintar/:name/
 
 # Defaults
 defaults:
