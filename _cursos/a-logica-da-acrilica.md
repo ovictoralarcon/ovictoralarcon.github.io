@@ -8,7 +8,7 @@ duracao: "um a cada 15 dias"
 preco: "R$ 297"
 vagas: "20"
 local: "Online"
-ativo: true
+ativo: false
 ordem: 1
 formulario: "https://forms.gle/G8f8rj3NBnT7wr5"
 formulario_label: "Quero participar"

@@ -1,0 +1,350 @@
+---
+layout: default
+---
+<article class="oficina-single">
+
+  <section class="oficina-hero">
+    <div class="container container--narrow">
+      <div class="page-hero__eyebrow">
+        <span class="label">Oficina ao vivo · {{ page.data_evento_label }}</span>
+      </div>
+      <h1 class="oficina-titulo">{{ page.title }}</h1>
+      {% if page.subtitulo %}
+        <p class="oficina-subtitulo">{{ page.subtitulo }}</p>
+      {% endif %}
+    </div>
+  </section>
+
+  <section class="oficina-corpo">
+    <div class="container container--narrow">
+
+      {% if page.video %}
+      <div class="oficina-video">
+        <iframe src="https://www.youtube.com/embed/{{ page.video }}" frameborder="0" allowfullscreen></iframe>
+      </div>
+      {% endif %}
+
+      <div class="oficina-texto">
+        {{ content }}
+      </div>
+
+      {% if page.promessa %}
+      <div class="oficina-promessa">
+        <p>{{ page.promessa }}</p>
+      </div>
+      {% endif %}
+
+      {% if page.fundamentos %}
+      <div class="oficina-fundamentos">
+        {% for item in page.fundamentos %}
+        <div class="oficina-fundamentos__item">
+          <div class="oficina-fundamentos__num">{{ forloop.index | prepend: "0" | slice: -2, 2 }}</div>
+          <div class="oficina-fundamentos__label">{{ item }}</div>
+        </div>
+        {% endfor %}
+      </div>
+      {% endif %}
+
+      {% if page.aprendizados %}
+      <div class="oficina-lista-bloco">
+        <h3>O que você vai aprender</h3>
+        <ul class="oficina-check-list">
+          {% for item in page.aprendizados %}
+          <li>{{ item }}</li>
+          {% endfor %}
+        </ul>
+      </div>
+      {% endif %}
+
+      {% if page.publico %}
+      <div class="oficina-lista-bloco">
+        <h3>Esta oficina é para você que</h3>
+        <ul class="oficina-check-list oficina-check-list--diamante">
+          {% for item in page.publico %}
+          <li>{{ item }}</li>
+          {% endfor %}
+        </ul>
+      </div>
+      {% endif %}
+
+      {% if page.como_funciona %}
+      <div class="oficina-how">
+        <h3>Como vai funcionar</h3>
+        <p>{{ page.como_funciona }}</p>
+      </div>
+      {% endif %}
+
+      <div class="oficina-how">
+        <h3>Quem é Victor Alarcon</h3>
+        <p>Artista visual e professor, com formação em Ciências Biológicas pela USP (2013) e em Artes Visuais pela Unesp (2025). Sua prática abrange xilogravura, pintura e escultura, em que animais assumem posturas e gestos quase humanos. Como professor, conduz aulas individuais e em grupo com foco em técnica tradicional e processo.</p>
+      </div>
+
+      <!-- ===== OFERTA / LOTES ===== -->
+      <div class="oficina-offer" id="oficina-offer-{{ page.slug_id | default: page.title | slugify }}"
+           data-evento="{{ page.data_evento }}"
+           data-evento-label="{{ page.data_evento_label }}"
+           data-pos-evento-start="{{ page.pos_evento.start }}"
+           data-pos-evento-preco="{{ page.pos_evento.preco }}"
+           data-pos-evento-label="{{ page.pos_evento.label | default: 'Acesso à gravação' }}"
+           data-titulo="{{ page.title }}"
+           data-whatsapp="{{ site.whatsapp_numero }}">
+        {% for lote in page.lotes %}
+        <span class="oficina-lote-data"
+              data-id="{{ lote.id }}"
+              data-label="{{ lote.label }}"
+              data-preco="{{ lote.preco }}"
+              data-start="{{ lote.start }}"
+              data-end="{{ lote.end }}"></span>
+        {% endfor %}
+      </div>
+
+    </div>
+  </section>
+
+  <div class="container container--narrow">
+    <div class="obra-nav">
+      <a href="{{ '/venha-pintar/' | relative_url }}" class="back-link">← Venha Pintar</a>
+    </div>
+  </div>
+</article>
+
+<style>
+  .oficina-hero { padding: var(--espaco-xl) 0 var(--espaco-md); }
+  .oficina-titulo {
+    font-family: var(--fonte);
+    font-weight: 300;
+    font-size: clamp(2rem, 5vw, var(--escala-2xl));
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+    color: var(--cor-texto);
+    margin: 12px 0;
+  }
+  .oficina-subtitulo {
+    font-size: var(--escala-sm);
+    font-weight: 300;
+    color: var(--cor-secundario);
+    max-width: 480px;
+  }
+
+  .oficina-promessa {
+    background: var(--cor-fundo);
+    border: 1px solid var(--cor-linha);
+    border-left: 3px solid var(--cor-acento);
+    color: var(--cor-texto);
+    text-align: left;
+    padding: var(--espaco-md) var(--espaco-md);
+    margin: var(--espaco-lg) 0;
+  }
+  .oficina-promessa p {
+    font-size: var(--escala-md);
+    font-weight: 300;
+    line-height: 1.5;
+    max-width: 480px;
+    margin: 0;
+  }
+
+  .oficina-fundamentos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1px;
+    background: var(--cor-linha);
+    border: 1px solid var(--cor-linha);
+    margin: var(--espaco-md) 0;
+  }
+  .oficina-fundamentos__item { background: var(--cor-fundo); padding: var(--espaco-md); }
+  .oficina-fundamentos__num {
+    font-size: var(--escala-xs);
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    color: var(--cor-acento);
+    margin-bottom: 6px;
+  }
+  .oficina-fundamentos__label {
+    font-size: var(--escala-md);
+    font-weight: 300;
+    color: var(--cor-texto);
+  }
+
+  .oficina-lista-bloco { margin: var(--espaco-lg) 0; }
+  .oficina-lista-bloco h3 {
+    font-family: var(--fonte);
+    font-size: var(--escala-xs);
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--cor-acento);
+    margin-bottom: var(--espaco-sm);
+  }
+  .oficina-check-list { list-style: none; padding: 0; }
+  .oficina-check-list li {
+    font-size: var(--escala-base);
+    font-weight: 300;
+    color: var(--cor-texto);
+    padding: 10px 0 10px 30px;
+    position: relative;
+    border-bottom: 1px solid var(--cor-linha);
+  }
+  .oficina-check-list li:last-child { border-bottom: none; }
+  .oficina-check-list li::before {
+    content: ""; position: absolute; left: 0; top: 16px;
+    width: 12px; height: 12px; border: 1.5px solid var(--cor-acento); border-radius: 50%;
+  }
+  .oficina-check-list--diamante li::before { border-radius: 0; transform: rotate(45deg); top: 14px; }
+
+  .oficina-how {
+    background: var(--cor-fundo);
+    border: 1px solid var(--cor-linha);
+    padding: var(--espaco-md);
+    margin: var(--espaco-md) 0;
+  }
+  .oficina-how h3 {
+    font-family: var(--fonte);
+    font-size: var(--escala-xs);
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--cor-acento);
+    margin-bottom: var(--espaco-sm);
+  }
+  .oficina-how p {
+    font-size: var(--escala-sm);
+    font-weight: 300;
+    color: var(--cor-texto);
+    line-height: 1.6;
+  }
+
+  .oficina-offer { text-align: center; margin: var(--espaco-lg) 0 var(--espaco-md); }
+  .oficina-offer__status {
+    font-size: var(--escala-xs);
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--cor-venda, #2E7D32);
+    margin-bottom: var(--espaco-xs);
+  }
+  .oficina-offer__status--late { color: var(--cor-acento); }
+  .oficina-offer h2 {
+    font-family: var(--fonte);
+    font-size: var(--escala-lg);
+    font-weight: 300;
+    color: var(--cor-texto);
+    margin-bottom: var(--espaco-md);
+  }
+
+  .oficina-lote-track {
+    display: flex; justify-content: center; gap: 8px; margin-bottom: var(--espaco-md); flex-wrap: wrap;
+  }
+  .oficina-lote-pip {
+    flex: 1; max-width: 140px; padding: 12px 8px;
+    border: 1px solid var(--cor-linha); opacity: 0.4;
+  }
+  .oficina-lote-pip.is-active { opacity: 1; border-color: var(--cor-acento); background: var(--cor-fundo); }
+  .oficina-lote-pip__label {
+    font-size: 10px; font-weight: 400; letter-spacing: 0.1em; text-transform: uppercase;
+    color: var(--cor-secundario); margin-bottom: 4px;
+  }
+  .oficina-lote-pip__price { font-size: var(--escala-md); font-weight: 300; color: var(--cor-texto); }
+  .oficina-lote-pip.is-active .oficina-lote-pip__price { color: var(--cor-acento); }
+  .oficina-lote-pip__periodo {
+    font-size: 10px; font-weight: 400; color: var(--cor-secundario); margin-top: 4px;
+  }
+
+  .oficina-price { font-size: 50px; font-weight: 300; color: var(--cor-texto); margin-bottom: 6px; }
+  .oficina-price sup { font-size: 20px; }
+  .oficina-price-note { font-size: var(--escala-xs); font-weight: 400; color: var(--cor-secundario); margin-bottom: var(--espaco-md); }
+
+  .oficina-whatsapp-btn {
+    display: inline-flex; align-items: center; gap: 10px;
+    background: #25D366; color: #FFFFFF;
+    font-family: var(--fonte); font-size: var(--escala-sm); font-weight: 500;
+    padding: 16px 32px; text-decoration: none;
+    transition: background-color 0.2s;
+  }
+  .oficina-whatsapp-btn:hover { background: #1EBE5A; }
+  .oficina-whatsapp-btn svg { width: 18px; height: 18px; }
+  .oficina-offer-fine { font-size: var(--escala-xs); font-weight: 400; color: var(--cor-secundario); margin-top: var(--espaco-sm); }
+
+  @media (max-width: 520px) {
+    .oficina-fundamentos { grid-template-columns: 1fr; }
+    .oficina-lote-track { flex-direction: column; }
+    .oficina-lote-pip { max-width: none; }
+  }
+</style>
+
+<script>
+(function () {
+  const WHATSAPP_ICON = '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.85.5 3.58 1.36 5.07L2 22l5.2-1.36a9.84 9.84 0 0 0 4.84 1.28h.01c5.46 0 9.91-4.45 9.91-9.91C21.96 6.45 17.5 2 12.04 2zm5.83 14.04c-.25.7-1.45 1.34-1.99 1.42-.51.08-1.15.11-1.86-.12-.43-.13-.97-.31-1.67-.6-2.94-1.27-4.86-4.24-5-4.44-.15-.2-1.2-1.6-1.2-3.05 0-1.45.76-2.16 1.03-2.46.27-.3.59-.37.79-.37.2 0 .39 0 .56.01.18.01.42-.07.66.5.25.6.84 2.05.91 2.2.08.15.13.33.03.53-.1.2-.15.32-.3.49-.15.17-.31.38-.45.51-.15.14-.3.3-.13.59.17.3.76 1.25 1.63 2.02 1.12 1 2.06 1.31 2.36 1.46.3.15.48.13.65-.05.18-.18.74-.86.94-1.16.2-.3.4-.25.67-.15.27.1 1.71.81 2 .96.3.15.49.22.56.35.07.13.07.74-.18 1.44z"/></svg>';
+
+  document.querySelectorAll(".oficina-offer").forEach(function (box) {
+    const whatsappNumber = box.dataset.whatsapp;
+    const titulo = box.dataset.titulo;
+    const eventoLabel = box.dataset.eventoLabel;
+
+    const lotes = Array.from(box.querySelectorAll(".oficina-lote-data")).map(function (el) {
+      return {
+        id: el.dataset.id,
+        label: el.dataset.label,
+        preco: el.dataset.preco,
+        start: el.dataset.start,
+        end: el.dataset.end
+      };
+    });
+
+    const posEvento = {
+      start: box.dataset.posEventoStart,
+      preco: box.dataset.posEventoPreco,
+      label: box.dataset.posEventoLabel
+    };
+
+    const today = new Date();
+    today.setHours(0, 0, 0, 0);
+
+    function waLink(label, preco, isPos) {
+      const msg = isPos
+        ? 'Olá! Quero ter acesso à gravação da oficina "' + titulo + '" — R$' + preco + '.'
+        : 'Olá! Quero garantir minha vaga na oficina "' + titulo + '" — ' + label + ', R$' + preco + '.';
+      return "https://wa.me/" + whatsappNumber + "?text=" + encodeURIComponent(msg);
+    }
+
+    let html = "";
+
+    if (posEvento.start && today >= new Date(posEvento.start + "T00:00:00")) {
+      html = '<div class="oficina-offer__status oficina-offer__status--late">Oficina ao vivo encerrada</div>' +
+        '<h2>' + posEvento.label + '</h2>' +
+        '<div class="oficina-price"><sup>R$</sup>' + posEvento.preco + '</div>' +
+        '<div class="oficina-price-note">Acesso liberado imediatamente após o pagamento</div>' +
+        '<a class="oficina-whatsapp-btn" href="' + waLink(posEvento.label, posEvento.preco, true) + '" target="_blank" rel="noopener">' + WHATSAPP_ICON + ' Quero a gravação no WhatsApp</a>' +
+        '<p class="oficina-offer-fine">Pagamento via Pix, combinado direto no WhatsApp.</p>';
+    } else {
+      let current = lotes[0];
+      lotes.forEach(function (l) {
+        if (today >= new Date(l.start + "T00:00:00")) current = l;
+      });
+
+    function fmtData(iso) {
+      if (!iso) return "";
+      const [, m, d] = iso.split("-");
+      return d + "/" + m;
+    }
+
+    const pips = lotes.map(function (l) {
+      const periodo = l.end ? fmtData(l.start) + " a " + fmtData(l.end) : "a partir de " + fmtData(l.start);
+      return '<div class="oficina-lote-pip ' + (l.id === current.id ? "is-active" : "") + '">' +
+        '<div class="oficina-lote-pip__label">' + l.label + '</div>' +
+        '<div class="oficina-lote-pip__price">R$' + l.preco + '</div>' +
+        '<div class="oficina-lote-pip__periodo">' + periodo + '</div></div>';
+    }).join("");
+
+      html = '<div class="oficina-offer__status">Vagas abertas · ' + current.label + '</div>' +
+        '<h2>Garanta sua vaga para ' + eventoLabel + '</h2>' +
+        '<div class="oficina-lote-track">' + pips + '</div>' +
+        '<div class="oficina-price"><sup>R$</sup>' + current.preco + '</div>' +
+        '<div class="oficina-price-note">Valor sobe no próximo lote — vagas do lote atual são limitadas</div>' +
+        '<a class="oficina-whatsapp-btn" href="' + waLink(current.label, current.preco, false) + '" target="_blank" rel="noopener">' + WHATSAPP_ICON + ' Garantir minha vaga no WhatsApp</a>' +
+        '<p class="oficina-offer-fine">Pagamento via Pix, combinado direto no WhatsApp.</p>';
+    }
+
+    box.innerHTML = html;
+  });
+})();
+</script>

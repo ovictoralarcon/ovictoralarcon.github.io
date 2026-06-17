@@ -8,7 +8,7 @@ duracao: "2h cada"
 preco: "R$ 500"
 vagas: "6"
 local: "São Paulo"
-ativo: true
+ativo: False
 ordem: 1
 formulario: "https://wa.me/55119XXXXXXXX"
 formulario_label: "Me manda uma mensagem"

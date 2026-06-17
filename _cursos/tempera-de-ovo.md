@@ -8,7 +8,7 @@ duracao: "A definir"
 preco: "A definir"
 vagas: "A definir"
 local: "São Paulo"
-ativo: true
+ativo: false
 ordem: 2
 formulario: "https://forms.gle/seulink"
 formulario_label: "Entrar na lista de espera"

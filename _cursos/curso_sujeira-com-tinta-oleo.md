@@ -9,8 +9,8 @@ duracao: "2h cada"
 preco: "R$ 000"
 vagas:
 local: "São Paulo"
-ativo: true
-ordem: 3
+ativo: false
+ordem: 
 formulario: "https://forms.gle/seulink"       # opcional
 formulario_label: "Entrar na lista de espera"  # opcional
 ---
