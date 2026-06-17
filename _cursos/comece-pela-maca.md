@@ -65,6 +65,8 @@ O problema é que a pintura costuma parecer distante. Você imagina que precisa 
 
 Mas a verdade é que toda prática artística começa do mesmo jeito: com uma primeira pintura. Foi pensando nisso que criei esta oficina.
 
+<img src="https://res.cloudinary.com/divlykiqq/image/upload/v1781723015/IMG_20250311_092641_HDR_znuvln.jpg" style="width: 50%; height: auto; display: block; margin: 30px auto;">
+
 <div class="oficina-cta-inline">
   <a href="#oficina-offer-inscricao">Garantir minha vaga →</a>
 </div>
