@@ -39,17 +39,17 @@ lotes:
     label: "1º lote"
     preco: 47
     start: "2026-06-17"
-    end: "2026-06-25"
+    end: "2026-06-20"
   - id: 2
     label: "2º lote"
     preco: 67
-    start: "2026-06-26"
-    end: "2026-06-30"
+    start: "2026-06-21"
+    end: "2026-06-27"
   - id: 3
     label: "3º lote"
     preco: 97
-    start: "2026-07-01"
-    end: "2026-07-02"
+    start: "2026-06-28"
+    end: "2026-06-30"
 
 pos_evento:
   start: "2026-07-03"
