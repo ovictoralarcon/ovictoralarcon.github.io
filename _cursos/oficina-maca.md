@@ -6,8 +6,8 @@ ativo: true
 ordem: 1
 
 # Texto do front matter usado pelo layout "oficina"
-data_evento: "2026-07-02"
-data_evento_label: "02/07"
+data_evento: "2026-06-30"
+data_evento_label: "30/06"
 dia_semana: "Quinta"
 
 promessa: "Em 3h00, você vai pintar uma maçã do início ao fim com tinta acrílica — e vai sair de lá com uma pintura pronta."
@@ -44,7 +44,7 @@ lotes:
     label: "2º lote"
     preco: 67
     start: "2026-06-26"
-    end: "2026-06-30"
+    end: "2026-06-29"
   - id: 3
     label: "3º lote"
     preco: 97
