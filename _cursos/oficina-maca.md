@@ -6,9 +6,16 @@ slug_id: "inscricao"
 ativo: false
 ordem: 1
 
+<<<<<<< HEAD
 data_evento: "2026-06-30"
 data_evento_label: "30/06"
 dia_semana: "Terça"
+=======
+# Texto do front matter usado pelo layout "oficina"
+data_evento: "2026-06-30"
+data_evento_label: "30/06"
+dia_semana: "Quinta"
+>>>>>>> e5d6609c5153eafe797a708175bc9e68c2e9cd57
 
 promessa: "Em 3h00, você vai pintar uma maçã do início ao fim com tinta acrílica e vai sair de lá com uma pintura pronta."
 
