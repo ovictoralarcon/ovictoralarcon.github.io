@@ -6,8 +6,8 @@ ativo: true
 ordem: 1
 
 # Texto do front matter usado pelo layout "oficina"
-data_evento: "2026-07-02"
-data_evento_label: "02/07"
+data_evento: "2026-06-30"
+data_evento_label: "30/06"
 dia_semana: "Quinta"
 
 promessa: "Em 3h00, você vai pintar uma maçã do início ao fim com tinta acrílica — e vai sair de lá com uma pintura pronta."
