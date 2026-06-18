@@ -150,3 +150,8 @@ Assim que confirmar sua vaga, você receberá uma lista de materiais simples, ac
 ## Oficina ao vivo, e você terá acesso à gravação
 
 Mesmo que sua rotina de trabalho — ou um imprevisto — te impeça de estar no Meet na terça-feira à noite, você não ficará para trás. A gravação é sua e você pode pintar sua maçã no seu próprio ritmo, no fim de semana ou quando se sentir inspirado. Mas se puder estar ao vivo, a experiência de pintar "junto" e tirar dúvidas em tempo real não tem preço. Garanta sua vaga agora.
+
+<p align="center">
+  <img src="/assets/img/come_maca.png" alt="Maçã pintada em acrílico - exemplo do curso" width="400">
+</p>
+
