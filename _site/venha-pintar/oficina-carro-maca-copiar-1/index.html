@@ -25,11 +25,11 @@
 <meta property="og:url" content="http://localhost:4000/venha-pintar/oficina-carro-maca-copiar-1/" />
 <meta property="og:site_name" content="Victor Alarcon" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2026-06-18T12:23:08-03:00" />
+<meta property="article:published_time" content="2026-09-02T10:43:49-03:00" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="Você pinta como eu pinto?" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Victor Alarcon"},"dateModified":"2026-06-18T12:23:08-03:00","datePublished":"2026-06-18T12:23:08-03:00","description":"Você já teve vontade de pintar?","headline":"Você pinta como eu pinto?","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/venha-pintar/oficina-carro-maca-copiar-1/"},"url":"http://localhost:4000/venha-pintar/oficina-carro-maca-copiar-1/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Victor Alarcon"},"dateModified":"2026-09-02T10:43:49-03:00","datePublished":"2026-09-02T10:43:49-03:00","description":"Você já teve vontade de pintar?","headline":"Você pinta como eu pinto?","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/venha-pintar/oficina-carro-maca-copiar-1/"},"url":"http://localhost:4000/venha-pintar/oficina-carro-maca-copiar-1/"}</script>
 <!-- End Jekyll SEO tag -->
 
 </head>
@@ -173,7 +173,8 @@
            data-pos-evento-preco="67"
            data-pos-evento-label="Acesso à gravação"
            data-titulo="Você  pinta como eu pinto?"
-           data-whatsapp="5511994906841">
+           data-whatsapp="5511994906841"
+           data-tipo="oficina">
         
         <span class="oficina-lote-data"
               data-id="1"
@@ -381,6 +382,53 @@
   }
   .oficina-cta-inline a:hover { background: var(--cor-acento-escuro, #960008); }
 
+  .oficina-promessa-citacao {
+    margin: var(--espaco-md) 0;
+  }
+  .oficina-promessa-citacao blockquote {
+    border-left: 3px solid var(--cor-acento);
+    padding-left: var(--espaco-md);
+    margin: 0;
+    font-size: var(--escala-lg);
+    font-weight: 300;
+    line-height: 1.4;
+    color: var(--cor-texto);
+    font-style: italic;
+  }
+
+  .oficina-ciclo {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1px;
+    background: var(--cor-linha);
+    border: 1px solid var(--cor-linha);
+    margin: var(--espaco-lg) 0;
+  }
+  .oficina-ciclo__item {
+    background: var(--cor-fundo);
+    padding: var(--espaco-md);
+    display: flex;
+    flex-direction: column;
+    gap: var(--espaco-xs);
+  }
+  .oficina-ciclo__num {
+    font-size: var(--escala-xs);
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    color: var(--cor-acento);
+  }
+  .oficina-ciclo__item h3 {
+    font-size: var(--escala-md);
+    font-weight: 300;
+    color: var(--cor-texto);
+  }
+  .oficina-ciclo__item p {
+    font-size: var(--escala-sm);
+    font-weight: 300;
+    color: var(--cor-secundario);
+    line-height: 1.65;
+  }
+
   .oficina-galeria-referencias {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -420,6 +468,7 @@
 
   @media (max-width: 600px) {
     .oficina-galeria-referencias { grid-template-columns: 1fr; }
+    .oficina-ciclo { grid-template-columns: 1fr; }
   }
 
   @media (max-width: 520px) {
@@ -437,6 +486,7 @@
     const whatsappNumber = box.dataset.whatsapp;
     const titulo = box.dataset.titulo;
     const eventoLabel = box.dataset.eventoLabel;
+    const tipo = box.dataset.tipo || "oficina";
 
     const lotes = Array.from(box.querySelectorAll(".oficina-lote-data")).map(function (el) {
       return {
@@ -458,9 +508,14 @@
     today.setHours(0, 0, 0, 0);
 
     function waLink(label, preco, isPos) {
-      const msg = isPos
-        ? 'Olá! Quero ter acesso à gravação da oficina "' + titulo + '" — R$' + preco + '.'
-        : 'Olá! Quero garantir minha vaga na oficina "' + titulo + '" — ' + label + ', R$' + preco + '.';
+      let msg;
+      if (tipo === "formacao") {
+        msg = 'Olá! Quero me inscrever na "' + titulo + '" — R$' + preco + '.';
+      } else if (isPos) {
+        msg = 'Olá! Quero ter acesso à gravação da oficina "' + titulo + '" — R$' + preco + '.';
+      } else {
+        msg = 'Olá! Quero garantir minha vaga na oficina "' + titulo + '" — ' + label + ', R$' + preco + '.';
+      }
       return "https://wa.me/" + whatsappNumber + "?text=" + encodeURIComponent(msg);
     }
 
@@ -479,26 +534,39 @@
         if (today >= new Date(l.start + "T00:00:00")) current = l;
       });
 
-    function fmtData(iso) {
-      if (!iso) return "";
-      const [, m, d] = iso.split("-");
-      return d + "/" + m;
-    }
+      function fmtData(iso) {
+        if (!iso) return "";
+        const [, m, d] = iso.split("-");
+        return d + "/" + m;
+      }
 
-    const pips = lotes.map(function (l) {
-      const periodo = l.end ? fmtData(l.start) + " a " + fmtData(l.end) : "a partir de " + fmtData(l.start);
-      return '<div class="oficina-lote-pip ' + (l.id === current.id ? "is-active" : "") + '">' +
-        '<div class="oficina-lote-pip__label">' + l.label + '</div>' +
-        '<div class="oficina-lote-pip__price">R$' + l.preco + '</div>' +
-        '<div class="oficina-lote-pip__periodo">' + periodo + '</div></div>';
-    }).join("");
+      const pips = lotes.map(function (l) {
+        const periodo = l.end ? fmtData(l.start) + " a " + fmtData(l.end) : "a partir de " + fmtData(l.start);
+        return '<div class="oficina-lote-pip ' + (l.id === current.id ? "is-active" : "") + '">' +
+          '<div class="oficina-lote-pip__label">' + l.label + '</div>' +
+          '<div class="oficina-lote-pip__price">R$' + l.preco + '</div>' +
+          '<div class="oficina-lote-pip__periodo">' + periodo + '</div></div>';
+      }).join("");
 
-      html = '<div class="oficina-offer__status">Vagas abertas · ' + current.label + '</div>' +
-        '<h2>Garanta sua vaga para ' + eventoLabel + '</h2>' +
-        '<div class="oficina-lote-track">' + pips + '</div>' +
+      const statusText = tipo === "formacao" ? "Vagas abertas · " + current.label : "Vagas abertas · " + current.label;
+      const headlineText = tipo === "formacao"
+        ? "Entre para a turma fundadora"
+        : "Garanta sua vaga para " + eventoLabel;
+      const priceNote = tipo === "formacao"
+        ? "Pagamento único · acesso imediato ao conteúdo gravado"
+        : "Valor sobe no próximo lote — vagas do lote atual são limitadas";
+      const btnText = tipo === "formacao"
+        ? "Quero entrar na turma fundadora"
+        : "Garantir minha vaga no WhatsApp";
+
+      const showPips = lotes.length > 1 ? '<div class="oficina-lote-track">' + pips + '</div>' : '';
+
+      html = '<div class="oficina-offer__status">' + statusText + '</div>' +
+        '<h2>' + headlineText + '</h2>' +
+        showPips +
         '<div class="oficina-price"><sup>R$</sup>' + current.preco + '</div>' +
-        '<div class="oficina-price-note">Valor sobe no próximo lote — vagas do lote atual são limitadas</div>' +
-        '<a class="oficina-whatsapp-btn" href="' + waLink(current.label, current.preco, false) + '" target="_blank" rel="noopener">' + WHATSAPP_ICON + ' Garantir minha vaga no WhatsApp</a>' +
+        '<div class="oficina-price-note">' + priceNote + '</div>' +
+        '<a class="oficina-whatsapp-btn" href="' + waLink(current.label, current.preco, false) + '" target="_blank" rel="noopener">' + WHATSAPP_ICON + ' ' + btnText + '</a>' +
         '<p class="oficina-offer-fine">Pagamento via Pix, combinado direto no WhatsApp.</p>';
     }
 
