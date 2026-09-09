@@ -71,7 +71,9 @@ Para que essa **sensação de domínio** deixe de ser uma exceção e passe a fa
 
 ## Como a formação funciona
 
-A formação tem oito semanas e funciona com dois tipos de aulas alternadas: uma semana de pintura guiada e outra de exercício livre. As aulas duram duas horas e ficam gravadas. Você acompanha no seu ritmo mesmo que não possa estar ao vivo.
+A formação dura oito semanas e alterna dois tipos de aula: em uma semana, você acompanha uma aula de pintura guiada; na seguinte, realiza um exercício de pintura livre para colocar em prática o que aprendeu.
+
+As aulas têm duas horas de duração e ficam disponíveis assim que são gravadas. Nessa turma, as gravações acontecem ao longo das semanas que antecedem o início da formação: então quando as aulas começarem, o material já estará disponível para você assistir quando quiser.
 
 Essa alternância cria um ciclo claro: primeiro você vê os conceitos sendo aplicados, depois experimenta por conta própria, e por fim recebe uma devolutiva sobre seu trabalho. É esse ciclo que te coloca no caminho da autonomia real.
 
@@ -79,22 +81,23 @@ Essa alternância cria um ciclo claro: primeiro você vê os conceitos sendo apl
   <div class="oficina-ciclo__item">
     <span class="oficina-ciclo__num">01</span>
     <h3>Aula guiada</h3>
-    <p>Vamos pintar juntos pelo YouTube. Eu pinto, explico o que estou fazendo e por quê, e você me acompanha. O foco é entender cada decisão, não só reproduzir o resultado.</p>
+    <p>Você acompanha uma aula gravada no formato "pinte comigo". Enquanto pinto, explico cada decisão e o motivo por trás dela. O objetivo é entender o processo, não apenas reproduzir o resultado.
+</p>
   </div>
   <div class="oficina-ciclo__item">
     <span class="oficina-ciclo__num">02.a</span>
     <h3>Exercício livre</h3>
-    <p>Você recebe uma imagem para pintar aplicando o que aprendeu, mas as decisões são suas. É aqui que você começa a desenvolver autonomia e a construir sua própria linguagem.</p>
+    <p>Você recebe uma imagem para pintar aplicando o que aprendeu. O objetivo é fazer você tomar suas próprias decisões e começar a  construir autonomia na pintura.</p>
   </div>
   <div class="oficina-ciclo__item">
     <span class="oficina-ciclo__num">02.b</span>
     <h3>Encontro coletivo</h3>
-    <p>Fazemos o exercício livre juntos pelo Meet. Cada um faz sua própria pintura, compartilhamos o processo, ao final vemos os trabalhos uns dos outros e trocamos ideias e conversamos sobre o que apareceu.</p>
+    <p>Temos um encontro coletivo semanal pelo Meet para devolutivas e tira-dúvidas. É um espaço para analisar os exercícios, discutir as escolhas de cada aluno e esclarecer dúvidas sobre o processo de pintura.</p>
   </div>
   <div class="oficina-ciclo__item">
     <span class="oficina-ciclo__num">03</span>
     <h3>Devolutiva individual</h3>
-    <p>Toda semana você me manda uma foto do que pintou pelo WhatsApp, com suas dúvidas. Eu respondo por áudio, olhando especificamente para o seu trabalho: o que vejo, por que funciona ou não, e o que é técnica versus o que é gosto.</p>
+    <p>Semanalmente você me manda uma foto do que pintou pelo WhatsApp, com suas dúvidas. Eu respondo por áudio, olhando especificamente para o seu trabalho: o que vejo, por que funciona ou não, e o que é técnica versus o que é gosto.</p>
   </div>
 </div>
 
@@ -153,3 +156,17 @@ Vai saber observar uma pintura com mais atenção, entender melhor as consequên
 Você não precisa de um estúdio caro nem de dezenas de tubos de tinta para começar.
 
 Assim que confirmar sua vaga, você recebe uma lista com os materiais necessários — todos simples e fáceis de encontrar. Se você já tiver parte deles, pode aproveitar o que tem.
+
+---
+
+## Turma fundadora
+
+Nas próximas turmas, o material gravado já vai estar pronto. Essa turma é diferente
+
+As quatro aulas gravadas ainda não existem. Elas vão ser feitas ao vivo entre 15 de setembro e 5 de outubro, com quem já confirmou a vaga. Quem entra agora vai estar presente no momento em que cada aula é construída: pode interagir, fazer perguntas, influenciar o que entra no material permanente.
+
+Quando a formação começar em 6 de outubro, você já vai ter o material todo disponível e vai ter mais tempo pra se dedicar aos exercícios livres.
+
+A primeira gravação é dia 15 de setembro. Quem entra depois perde.
+
+Além disso, o valor não vai ser de R$800,00, mas de R$400,00: metade do que vai custar nas próximas turmas.
