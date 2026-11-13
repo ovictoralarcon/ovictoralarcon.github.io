@@ -4,11 +4,11 @@ title: Obras
 description: Portfólio de Victor Alarcon — xilogravura, têmpera de ovo, gouache, escultura.
 permalink: /obras/
 destaques:
-  - homenagem-a-cabeca-de-joaquim-jose-da-silva-xavier
   - pirata-de-aquario
-  - mar-salgado
-  - gatos-com-acesso-a-rua-vivem-menos
-  - comer-e-dormir-como-um-porco
+  - homenagem-a-cabeca-de-joaquim-jose-da-silva-xavier
+  - nao-e-cuica-e-tlacuache
+  - querer-e-poder
+ 
 ---
 
 <section class="page-hero">
@@ -17,8 +17,8 @@ destaques:
       <span class="label">Portfólio</span>
     </div>
     <h1 class="page-hero__titulo">Obras</h1>
-    <p class="page-hero__subtitulo"><a href="{{ '/catalogo/' | relative_url }}" style="border-bottom: 1px solid currentColor;">Ver obras disponíveis →</a></p>
-    <a href="{{ '/assets/pdf/portfolio.pdf' | relative_url }}" target="_blank">Portfólio PDF →</a>
+   <!-- <p class="page-hero__subtitulo"><a href="{{ '/catalogo/' | relative_url }}" style="border-bottom: 1px solid currentColor;">Ver obras disponíveis →</a></p> -->
+    <a href="{{ '/assets/pdf/portfolio.pdf' | relative_url }}" target="_blank">Portfólio PDF (Outras obras) →</a>
   </div>
 </section>
 

@@ -10,3 +10,6 @@ localizacao: "ateliê"
 data_registro: "2026-10-15"
 imagem: "https://res.cloudinary.com/divlykiqq/image/upload/v1794595305/_MG_0681_fzrms0.jpg"
 ---
+
+![Laterla](https://res.cloudinary.com/divlykiqq/image/upload/v1794595309/_MG_0682_vwqndb.jpg)
+![Outra lateral](https://res.cloudinary.com/divlykiqq/image/upload/v1794595315/_MG_0684_rewl9t.jpg)
