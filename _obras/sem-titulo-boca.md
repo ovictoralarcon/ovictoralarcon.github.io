@@ -8,6 +8,6 @@ dimensoes: "10cm X 14,5cm"
 status: "Disponível"
 localizacao: "Ateliê"
 data_registro: "2026-06-09"
-preco: 360.75
+preco: 1000.00
 imagem: "https://res.cloudinary.com/divlykiqq/image/upload/q_auto/f_auto/v1781032771/_MG_0605_fbixgf.jpg"
 ---

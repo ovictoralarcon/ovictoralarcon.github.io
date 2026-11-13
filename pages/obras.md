@@ -4,8 +4,10 @@ title: Obras
 description: Portfólio de Victor Alarcon — xilogravura, têmpera de ovo, gouache, escultura.
 permalink: /obras/
 destaques:
-  - gatos-com-acesso-a-rua-vivem-menos
+  - homenagem-a-cabeca-de-joaquim-jose-da-silva-xavier
+  - pirata-de-aquario
   - mar-salgado
+  - gatos-com-acesso-a-rua-vivem-menos
   - comer-e-dormir-como-um-porco
 ---
 
@@ -30,7 +32,8 @@ destaques:
   {% if d %}{% assign destacadas = destacadas | push: d %}{% endif %}
 {% endfor %}
 
-{% assign por_ano = site.obras | sort: 'ano' | reverse %}
+{% assign publicadas = site.obras | where_exp: "obra", "obra.publicar != false" %}
+{% assign por_ano = publicadas | sort: 'ano' | reverse %}
 {% assign restantes = "" | split: "" %}
 {% for o in por_ano %}
   {% unless page.destaques contains o.slug %}
