@@ -3,6 +3,10 @@ layout: default
 title: Obras
 description: Portfólio de Victor Alarcon — xilogravura, têmpera de ovo, gouache, escultura.
 permalink: /obras/
+destaques:
+  - gatos-com-acesso-a-rua-vivem-menos
+  - mar-salgado
+  - comer-e-dormir-como-um-porco
 ---
 
 <section class="page-hero">
@@ -16,8 +20,27 @@ permalink: /obras/
   </div>
 </section>
 
+{%- comment -%}
+  Ordem: primeiro as obras listadas em destaques (na ordem da lista),
+  depois todas as outras, da mais recente para a mais antiga.
+{%- endcomment -%}
+{% assign destacadas = "" | split: "" %}
+{% for slug in page.destaques %}
+  {% assign d = site.obras | where: "slug", slug | first %}
+  {% if d %}{% assign destacadas = destacadas | push: d %}{% endif %}
+{% endfor %}
+
+{% assign por_ano = site.obras | sort: 'ano' | reverse %}
+{% assign restantes = "" | split: "" %}
+{% for o in por_ano %}
+  {% unless page.destaques contains o.slug %}
+    {% assign restantes = restantes | push: o %}
+  {% endunless %}
+{% endfor %}
+
+{% assign obras = destacadas | concat: restantes %}
+
 <section class="obras-grid container">
-  {% assign obras = site.obras | sort: 'ano' | reverse %}
   {% if obras.size > 0 %}
     {% for obra in obras %}
     <a href="{{ obra.url | relative_url }}" class="obra-card">

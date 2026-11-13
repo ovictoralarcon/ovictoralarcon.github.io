@@ -22,12 +22,12 @@
     <div class="container">
       <a href="{{ '/' | relative_url }}" class="site-logo">Victor Alarcon</a>
       <nav class="site-nav">
-        <a href="{{ '/obras/' | relative_url }}"{% if page.url contains '/obras' %} class="active"{% endif %}>Obras</a>
-        <a href="{{ '/venha-pintar/' | relative_url }}"{% if page.url contains '/venha-pintar' %} class="active"{% endif %}>Venha Pintar</a>
-        <a href="{{ '/textos/' | relative_url }}"{% if page.url contains '/textos' %} class="active"{% endif %}>Textos</a>
-        <a href="{{ '/sobre/' | relative_url }}"{% if page.url contains '/sobre' %} class="active"{% endif %}>Sobre</a>
-        <a href="{{ '/contato/' | relative_url }}"{% if page.url contains '/contato' %} class="active"{% endif %}>Contato</a>
-      </nav>
+  <a href="{{ '/bio-statement/' | relative_url }}"{% if page.url contains '/bio-statement' %} class="active"{% endif %}>Bio/Statement</a>
+  <a href="{{ '/curriculo/' | relative_url }}"{% if page.url contains '/curriculo' %} class="active"{% endif %}>Curriculum Vitae</a>
+  <a href="{{ '/obras/' | relative_url }}"{% if page.url contains '/obras' %} class="active"{% endif %}>Obras selecionadas</a>
+  <a href="{{ '/contato/' | relative_url }}"{% if page.url contains '/contato' %} class="active"{% endif %}>Contato</a>
+  <a href="{{ '/noticias/' | relative_url }}"{% if page.url contains '/noticias' %} class="active"{% endif %}>Notícias</a>
+</nav>
     </div>
   </header>
   {% endunless %}
@@ -45,17 +45,14 @@
           <p>São Paulo, Brasil</p>
         </div>
         <div class="footer-col">
-          <span class="footer-label">Canal</span>
-          <ul>
-            <li><a href="https://substack.com/@ovictoralarcon" target="_blank" rel="noopener">Substack</a></li>
-            <li><a href="https://instagram.com/ovictoralarcon" target="_blank" rel="noopener">Instagram</a></li>
-          </ul>
+        
         </div>
         <div class="footer-col">
           <span class="footer-label">Contato</span>
           <ul>
-            <li><a href="{{ '/contato/' | relative_url }}">Mensagem</a></li>
-            <li><a href="{{ '/venha-pintar/' | relative_url }}">Venha Pintar</a></li>
+            <li><a href="{{ '/contato/' | relative_url }}">Contato</a></li>
+            <li><a href="https://substack.com/@ovictoralarcon" target="_blank" rel="noopener">Substack</a></li>
+            <li><a href="https://instagram.com/ovictoralarcon" target="_blank" rel="noopener">Instagram</a></li>
           </ul>
         </div>
       </div>

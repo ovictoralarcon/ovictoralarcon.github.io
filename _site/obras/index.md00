@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Obras — Victor Alarcon</title>
+  <meta name="description" content="Portfólio de Victor Alarcon — xilogravura, têmpera de ovo, gouache, escultura.">
+
+  <link rel="icon" type="image/png" href="/assets/images/favicon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Obras | Victor Alarcon</title>
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Obras" />
+<meta name="author" content="Victor Alarcon" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Portfólio de Victor Alarcon — xilogravura, têmpera de ovo, gouache, escultura." />
+<meta property="og:description" content="Portfólio de Victor Alarcon — xilogravura, têmpera de ovo, gouache, escultura." />
+<link rel="canonical" href="http://localhost:4000/obras/" />
+<meta property="og:url" content="http://localhost:4000/obras/" />
+<meta property="og:site_name" content="Victor Alarcon" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Obras" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"Victor Alarcon"},"description":"Portfólio de Victor Alarcon — xilogravura, têmpera de ovo, gouache, escultura.","headline":"Obras","url":"http://localhost:4000/obras/"}</script>
+<!-- End Jekyll SEO tag -->
+
+</head>
+<body>
+
+  
+  <header class="site-header">
+    <div class="container">
+      <a href="/" class="site-logo">Victor Alarcon</a>
+      <nav class="site-nav">
+  <a href="/bio-statement/">Bio/Statement</a>
+  <a href="/curriculo/">Curriculum Vitae</a>
+  <a href="/obras/" class="active">Obras selecionadas</a>
+  <a href="/contato/">Contato</a>
+  <a href="/noticias/">Notícias</a>
+</nav>
+    </div>
+  </header>
+  
+
+  <main>
+    <section class="page-hero">
+  <div class="container">
+    <div class="page-hero__eyebrow">
+      <span class="label">Portfólio</span>
+    </div>
+    <h1 class="page-hero__titulo">Obras</h1>
+    <p class="page-hero__subtitulo"><a href="/catalogo/" style="border-bottom: 1px solid currentColor;">Ver obras disponíveis →</a></p>
+    <a href="/assets/pdf/portfolio.pdf" target="_blank">Portfólio PDF →</a>
+  </div>
+</section>
+
+<section class="obras-grid container">
+  
+  
+    
+    <a href="/obras/todo-mundo-tem-um-bandido-de-estimacao/" class="obra-card">
+      <div class="obra-card__imagem">
+        
+          <img src="https://res.cloudinary.com/divlykiqq/image/upload/v1781153807/2026_xilogravura_todo-mundo-tem-um-bandido-de-estimacao_zeero0.jpg" alt="Todo mundo tem um bandido de estimação." loading="lazy">
+        
+      </div>
+      <div class="obra-card__meta">
+        <span class="label">XILOGRAVURA</span>
+        <span class="label">2026</span>
+      </div>
+      <h2 class="obra-card__titulo">Todo mundo tem um bandido de estimação.</h2>
+      <p class="obra-card__info">42cm x 29cm</p>
+    </a>
+    
+    <a href="/obras/ta-olhando-o-que/" class="obra-card">
+      <div class="obra-card__imagem">
+        
+          <img src="https://res.cloudinary.com/divlykiqq/image/upload/v1781154317/2025_tempera-ovo_ta-olhando-o-que_u9ct6m.jpg" alt="Tá olhando o que?" loading="lazy">
+        
+      </div>
+      <div class="obra-card__meta">
+        <span class="label">TÊMPERA OVO</span>
+        <span class="label">2025</span>
+      </div>
+      <h2 class="obra-card__titulo">Tá olhando o que?</h2>
+      <p class="obra-card__info">20,5cm x16,5cm</p>
+    </a>
+    
+    <a href="/obras/somos-todos-lutadores/" class="obra-card">
+      <div class="obra-card__imagem">
+        
+          <img src="https://res.cloudinary.com/divlykiqq/image/upload/v1781230799/2025_tempera-ovo_somos-todos-lutadores_dhm4wc.jpg" alt="Somos todos lutadores" loading="lazy">
+        
+      </div>
+      <div class="obra-card__meta">
+        <span class="label">TÊMPERA OVO</span>
+        <span class="label">2025</span>
+      </div>
+      <h2 class="obra-card__titulo">Somos todos lutadores</h2>
+      <p class="obra-card__info">26,5cm x 22cm</p>
+    </a>
+    
+    <a href="/obras/mar-salgado/" class="obra-card">
+      <div class="obra-card__imagem">
+        
+          <img src="https://res.cloudinary.com/divlykiqq/image/upload/v1781230801/2025_tempera-ovo_mar-salgado_idqi9p.jpg" alt="Mar Salgado" loading="lazy">
+        
+      </div>
+      <div class="obra-card__meta">
+        <span class="label">TÊMPERA OVO</span>
+        <span class="label">2025</span>
+      </div>
+      <h2 class="obra-card__titulo">Mar Salgado</h2>
+      <p class="obra-card__info">19cm x 15,5cm</p>
+    </a>
+    
+    <a href="/obras/lua-de-mel/" class="obra-card">
+      <div class="obra-card__imagem">
+        
+          <img src="https://res.cloudinary.com/divlykiqq/image/upload/v1781231871/2025_ceramica_lua-de-mel_fpwzts.jpg" alt="Lua de mel" loading="lazy">
+        
+      </div>
+      <div class="obra-card__meta">
+        <span class="label">CERÂMICA</span>
+        <span class="label">2025</span>
+      </div>
+      <h2 class="obra-card__titulo">Lua de mel</h2>
+      <p class="obra-card__info">39 cm × 28 cm × 6 cm</p>
+    </a>
+    
+    <a href="/obras/tao-lindinho-que-da-raiva/" class="obra-card">
+      <div class="obra-card__imagem">
+        
+          <img src="https://res.cloudinary.com/divlykiqq/image/upload/v1781231964/2024_ceramica_tao-lindinho-que-da-raiva_jeijgl.jpg" alt="Tão lindinho que dá raiva" loading="lazy">
+        
+      </div>
+      <div class="obra-card__meta">
+        <span class="label">CERÂMICA</span>
+        <span class="label">2024</span>
+      </div>
+      <h2 class="obra-card__titulo">Tão lindinho que dá raiva</h2>
+      <p class="obra-card__info">33cm x 30 cm x 3cm</p>
+    </a>
+    
+    <a href="/obras/sem-titulo/" class="obra-card">
+      <div class="obra-card__imagem">
+        
+          <img src="https://res.cloudinary.com/divlykiqq/image/upload/v1781232945/2024_tempera-ovo-e-oleo-de-linhaca-com-pigmento_sem-titulo_cachorro_wv0lbn.jpg" alt="Sem título" loading="lazy">
+        
+      </div>
+      <div class="obra-card__meta">
+        <span class="label">TÊMPERA OVO E ÓLEO DE LINHAÇA COM PIGMENTO</span>
+        <span class="label">2024</span>
+      </div>
+      <h2 class="obra-card__titulo">Sem título</h2>
+      <p class="obra-card__info">20cm x 11cm</p>
+    </a>
+    
+    <a href="/obras/sem-titulo-boca/" class="obra-card">
+      <div class="obra-card__imagem">
+        
+          <img src="https://res.cloudinary.com/divlykiqq/image/upload/q_auto/f_auto/v1781032771/_MG_0605_fbixgf.jpg" alt="Sem Título - boca" loading="lazy">
+        
+      </div>
+      <div class="obra-card__meta">
+        <span class="label">TÊMPERA OVO</span>
+        <span class="label">2024</span>
+      </div>
+      <h2 class="obra-card__titulo">Sem Título - boca</h2>
+      <p class="obra-card__info">10cm X 14,5cm</p>
+    </a>
+    
+    <a href="/obras/sem-titulo-ovelha/" class="obra-card">
+      <div class="obra-card__imagem">
+        
+          <img src="https://res.cloudinary.com/divlykiqq/image/upload/v1781034530/_MG_0508_tcusjt.jpg" alt="Sem Título Ovelha" loading="lazy">
+        
+      </div>
+      <div class="obra-card__meta">
+        <span class="label">TÊMPERA OVO</span>
+        <span class="label">2023</span>
+      </div>
+      <h2 class="obra-card__titulo">Sem Título Ovelha</h2>
+      <p class="obra-card__info">10cm x 12cm</p>
+    </a>
+    
+    <a href="/obras/sem-titulo-morcego/" class="obra-card">
+      <div class="obra-card__imagem">
+        
+          <img src="https://res.cloudinary.com/divlykiqq/image/upload/v1781033921/MOrcego_MG_0488_nigvwo.jpg" alt="sem título_morcego" loading="lazy">
+        
+      </div>
+      <div class="obra-card__meta">
+        <span class="label">TÊMPERA OVO</span>
+        <span class="label">2023</span>
+      </div>
+      <h2 class="obra-card__titulo">sem título_morcego</h2>
+      <p class="obra-card__info">19cm x 15cm</p>
+    </a>
+    
+    <a href="/obras/o-homem-nao-vem-do-macaco/" class="obra-card">
+      <div class="obra-card__imagem">
+        
+          <img src="https://res.cloudinary.com/divlykiqq/image/upload/v1781230777/2023_acrilica_o-homem-nao-vem-do-macaco_tjfvfr.jpg" alt="O homem não vem do macaco" loading="lazy">
+        
+      </div>
+      <div class="obra-card__meta">
+        <span class="label">ACRÍLICA</span>
+        <span class="label">2023</span>
+      </div>
+      <h2 class="obra-card__titulo">O homem não vem do macaco</h2>
+      <p class="obra-card__info">46cmX35cm</p>
+    </a>
+    
+    <a href="/obras/gatos-com-acesso-a-rua-vivem-menos/" class="obra-card">
+      <div class="obra-card__imagem">
+        
+          <img src="https://res.cloudinary.com/divlykiqq/image/upload/v1781230834/2023_tempera-ovo-e-oleo-de-linhaca_gatos-com-acesso-a-rua-vivem-menos_nwycb8.jpg" alt="Gatos com acesso à rua vivem menos" loading="lazy">
+        
+      </div>
+      <div class="obra-card__meta">
+        <span class="label">TÊMPERA OVO E ÓLEO DE LINHAÇA</span>
+        <span class="label">2023</span>
+      </div>
+      <h2 class="obra-card__titulo">Gatos com acesso à rua vivem menos</h2>
+      <p class="obra-card__info">17 cm × 15,5 cm</p>
+    </a>
+    
+    <a href="/obras/comer-e-dormir-como-um-porco/" class="obra-card">
+      <div class="obra-card__imagem">
+        
+          <img src="https://res.cloudinary.com/divlykiqq/image/upload/v1781232074/2023_tempera-ovo_comer-e-dormir-como-um-porco_yxspfi.jpg" alt="Comer e dormir como um porco" loading="lazy">
+        
+      </div>
+      <div class="obra-card__meta">
+        <span class="label">TÊMPERA OVO</span>
+        <span class="label">2023</span>
+      </div>
+      <h2 class="obra-card__titulo">Comer e dormir como um porco</h2>
+      <p class="obra-card__info">50 cm × 46,5 cm</p>
+    </a>
+    
+    <a href="/obras/semtitulo-por-enquanto/" class="obra-card">
+      <div class="obra-card__imagem">
+        
+          <img src="https://res.cloudinary.com/divlykiqq/image/upload/v1781031901/_MG_0472_k7qn8m.jpg" alt="semtitulo por enquanto" loading="lazy">
+        
+      </div>
+      <div class="obra-card__meta">
+        <span class="label">CERA AUTOMOTIVA, ÓLEO DE LINHAÇA E PIGMENTO</span>
+        <span class="label">2022</span>
+      </div>
+      <h2 class="obra-card__titulo">semtitulo por enquanto</h2>
+      <p class="obra-card__info">66cm X 50cm</p>
+    </a>
+    
+    <a href="/obras/200-mil-anos-de-evolucao/" class="obra-card">
+      <div class="obra-card__imagem">
+        
+          <img src="https://res.cloudinary.com/divlykiqq/image/upload/v1781230745/2022_acrilica_200-mil-anos-de-evolucao_okyety.jpg" alt="200 mil anos de evolução" loading="lazy">
+        
+      </div>
+      <div class="obra-card__meta">
+        <span class="label">ACRÍLICA</span>
+        <span class="label">2022</span>
+      </div>
+      <h2 class="obra-card__titulo">200 mil anos de evolução</h2>
+      <p class="obra-card__info">85cm X 60cm</p>
+    </a>
+    
+  
+</section>
+
+  </main>
+
+  
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <span class="footer-label">Victor Alarcon</span>
+          <p>São Paulo, Brasil</p>
+        </div>
+        <div class="footer-col">
+        
+        </div>
+        <div class="footer-col">
+          <span class="footer-label">Contato</span>
+          <ul>
+            <li><a href="/contato/">Contato</a></li>
+            <li><a href="https://substack.com/@ovictoralarcon" target="_blank" rel="noopener">Substack</a></li>
+            <li><a href="https://instagram.com/ovictoralarcon" target="_blank" rel="noopener">Instagram</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-base">
+        <span>© 2026 Victor Alarcon</span>
+      </div>
+    </div>
+  </footer>
+  
+
+</body>
+</html>

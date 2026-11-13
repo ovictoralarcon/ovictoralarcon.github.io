@@ -8,7 +8,7 @@ permalink: /venha-pintar/
 <section class="page-hero">
   <div class="container">
     <div class="page-hero__eyebrow">
-      <span class="label">Venha Pintar</span>
+      <span class="label">Veenhaa Pintar</span>
     </div>
     <h1 class="page-hero__titulo">Venha Pintar</h1>
   </div>
